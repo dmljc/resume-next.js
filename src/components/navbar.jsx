@@ -1,0 +1,157 @@
+"use client";
+
+import { Button } from "./ui/button.jsx";
+import { cn } from "../lib/utils";
+import * as React from "react";
+import { Sun, Moon, Languages } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useI18n } from "../lib/i18n-core.js";
+
+// 简化后的导航项（标签使用 i18n 字典）
+const navItems = [
+  { id: "home", path: "/" },
+  { id: "resume", path: "/resume" },
+  { id: "aboutSite", path: "/about" },
+];
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const [isDark, setIsDark] = React.useState(false);
+  // 打印时不渲染导航（确保打印预览中无 DOM）
+  const [isPrinting, setIsPrinting] = React.useState(false);
+  const { t, toggleLang } = useI18n();
+
+  // 根据当前路径判断激活状态
+  const isActive = (path) => {
+    if (path === "/") {
+      return pathname === "/";
+    }
+    return pathname === path;
+  };
+
+  React.useEffect(() => {
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (saved === "dark" || (!saved && prefersDark)) {
+      setIsDark(true);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) root.classList.add("dark");
+    else root.classList.remove("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", isDark ? "#0b1220" : "#ffffff");
+  }, [isDark]);
+
+  // 监听打印事件与媒体查询，打印时不渲染导航
+  React.useEffect(() => {
+    const mql = window.matchMedia && window.matchMedia('print');
+    const onChange = (e) => setIsPrinting(e.matches);
+    const onBefore = () => setIsPrinting(true);
+    const onAfter = () => setIsPrinting(false);
+
+    if (mql) {
+      if (mql.addEventListener) mql.addEventListener('change', onChange);
+      else if (mql.addListener) mql.addListener(onChange);
+    }
+    window.addEventListener('beforeprint', onBefore);
+    window.addEventListener('afterprint', onAfter);
+
+    return () => {
+      if (mql) {
+        if (mql.removeEventListener) mql.removeEventListener('change', onChange);
+        else if (mql.removeListener) mql.removeListener(onChange);
+      }
+      window.removeEventListener('beforeprint', onBefore);
+      window.removeEventListener('afterprint', onAfter);
+    };
+  }, []);
+
+  const toggleTheme = () => setIsDark((v) => !v);
+
+  const linkClass = (path) =>
+    cn(
+      "transition-colors duration-200 text-[15px] font-medium rounded-full px-3 py-1 text-center cursor-pointer",
+      isActive(path)
+        ? "text-white bg-gradient-to-r from-[hsl(var(--grad-from))] to-[hsl(var(--grad-to))] shadow-sm hover:opacity-90"
+        : "text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800"
+    );
+
+  // 打印预览期间不渲染导航 DOM
+  if (isPrinting) {
+    return null;
+  }
+
+  return (
+    <nav className={cn("fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 print-hidden")}>
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+        <Link
+          href="/"
+          className="font-semibold gradient-brand text-lg tracking-wide transition-opacity duration-200 hover:opacity-80 cursor-pointer"
+        >
+          {t("brand.name")}
+        </Link>
+
+        {/* 移动端切换按钮：语言和主题 */}
+        <div className="md:hidden flex items-center gap-3 ml-auto">
+          <Button
+            variant="ghost"
+            size="sm"
+            aria-label={t("nav.toggleLang")}
+            onClick={toggleLang}
+            className="rounded-full w-9 h-9 p-0 border border-gray-200 dark:border-gray-700 text-gray-700 hover:bg-muted hover:scale-105 dark:text-gray-300 dark:hover:text-gray-100 shadow-sm transition-all duration-200"
+          >
+            <Languages size={22} strokeWidth={2} />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            aria-label={t("nav.toggleTheme")}
+            onClick={toggleTheme}
+            className="rounded-full w-9 h-9 p-0 border border-gray-200 dark:border-gray-700 text-gray-700 hover:bg-muted hover:scale-105 dark:text-gray-300 dark:hover:text-gray-100 shadow-sm transition-all duration-200"
+          >
+            {isDark ? <Sun size={22} strokeWidth={2} /> : <Moon size={22} strokeWidth={2} />}
+          </Button>
+        </div>
+
+        {/* 导航链接（仅桌面端显示）*/}
+        <div className="hidden md:flex items-center gap-6 ml-auto">
+          {navItems.map((item) => (
+            <Link
+              key={item.id}
+              href={item.path}
+              className={linkClass(item.path)}
+              aria-current={isActive(item.path) ? "page" : undefined}
+            >
+              {t(`nav.${item.id}`)}
+            </Link>
+          ))}
+
+          {/* 桌面端切换按钮：语言和主题 */}
+          <Button
+            variant="ghost"
+            size="sm"
+            aria-label={t("nav.toggleLang")}
+            onClick={toggleLang}
+            className="rounded-full w-8 h-8 p-0 border border-gray-200 dark:border-gray-700 text-gray-700 hover:bg-muted hover:scale-105 dark:text-gray-300 dark:hover:text-gray-100 transition-all duration-200"
+          >
+            <Languages size={22} strokeWidth={2} />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            aria-label={t("nav.toggleTheme")}
+            onClick={toggleTheme}
+            className="rounded-full w-8 h-8 p-0 border border-gray-200 dark:border-gray-700 text-gray-700 hover:bg-muted hover:scale-105 dark:text-gray-300 dark:hover:text-gray-100 transition-all duration-200"
+          >
+            {isDark ? <Sun size={22} strokeWidth={2} /> : <Moon size={22} strokeWidth={2} />}
+          </Button>
+        </div>
+      </div>
+    </nav>
+  );
+}
