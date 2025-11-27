@@ -30,6 +30,9 @@ module.exports = {
       "3xl": "1920px", // 1080p 全高清桌面
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
