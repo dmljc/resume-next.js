@@ -5,6 +5,7 @@ export const skills = [
     tags: [
       "React",
       "Vue",
+      "Next.js",
       "TypeScript",
       { zh: "微信小程序", en: "WeChat Mini Programs" },
     ],
