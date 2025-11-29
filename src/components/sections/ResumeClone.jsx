@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from 'react'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card.jsx'
 import { Badge } from '../ui/badge.jsx'

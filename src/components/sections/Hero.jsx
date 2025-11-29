@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../ui/button.jsx";
 import { ArrowRight } from "lucide-react";
 import { useI18n } from "../../lib/i18n-core.js";

@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../ui/card.jsx";
 import { Badge } from "../ui/badge.jsx";
 import { useI18n } from "../../lib/i18n-core.js";

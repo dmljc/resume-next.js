@@ -5,64 +5,69 @@ import "../index.css";
 
 export const metadata = {
     title: {
-        default: "Zhang Fangchao - Frontend Developer Resume",
-        template: "%s | Zhang Fangchao"
+        default: "张芳朝 - 前端开发工程师 | 9年经验 | React/Vue/Three.js",
+        template: "%s | 张芳朝"
     },
-    description: "Professional resume of Zhang Fangchao, a Frontend Developer with 9 years of experience specializing in React, Vue, and performance optimization.",
+    description: "张芳朝，资深前端开发工程师，9年前端开发经验，4年团队管理经验。精通React、Vue、Three.js、Next.js、TypeScript，擅长三维可视化、中后台系统重构、性能优化。主导多个核心项目落地，提升业务效率与用户体验。",
     keywords: [
         "张芳朝",
-        "Zhang Fangchao",
+        "张芳朝简历",
+        "前端开发工程师",
         "前端开发",
-        "Frontend Developer",
-        "全栈开发",
-        "Full Stack Developer",
-        "React",
-        "Vue",
+        "React开发",
+        "Vue开发",
         "Three.js",
-        "Nest.js",
+        "Next.js",
         "TypeScript",
-        "JavaScript",
-        "微信小程序",
-        "WeChat Mini Program",
         "三维可视化",
-        "3D Visualization",
         "性能优化",
-        "Performance Optimization",
         "团队管理",
-        "Team Leadership",
-        "中后台系统",
-        "Admin System",
-        "Webpack",
-        "Vite",
-        "Rollup",
-        "Node.js",
-        "MySQL",
-        "Nginx",
+        "全栈开发",
         "9年经验",
-        "9 Years Experience",
-        "个人简历",
-        "Resume"
+        "Zhang Fangchao",
+        "Frontend Developer",
+        "Full Stack Developer"
     ],
-    authors: [{ name: "Zhang Fangchao", url: "https://zhangfc.cn" }],
-    creator: "Zhang Fangchao",
+    authors: [{ name: "张芳朝", url: "https://zhangfc.cn" }],
+    creator: "张芳朝",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+        },
+    },
+    alternates: {
+        canonical: "https://zhangfc.cn",
+    },
     openGraph: {
-        title: "Zhang Fangchao - Frontend Developer Resume",
-        description: "Professional resume of Zhang Fangchao, a Frontend Developer with 9 years of experience.",
+        title: "张芳朝 - 前端开发工程师 | 9年经验",
+        description: "张芳朝，资深前端开发工程师，9年前端开发经验。精通React、Vue、Three.js、Next.js，擅长三维可视化、性能优化。",
         url: "https://zhangfc.cn",
-        siteName: "Zhang Fangchao Resume",
-        locale: "en_US",
+        siteName: "张芳朝个人简历",
+        locale: "zh_CN",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Zhang Fangchao - Frontend Developer Resume",
-        description: "Professional resume of Zhang Fangchao, a Frontend Developer with 9 years of experience.",
+        title: "张芳朝 - 前端开发工程师",
+        description: "张芳朝，资深前端开发工程师，9年前端开发经验。精通React、Vue、Three.js、Next.js。",
+    },
+    verification: {
+        baidu: "codeva-IbHDbJAeqx",
+    },
+    other: {
+        "baidu-site-verification": "codeva-IbHDbJAeqx",
     },
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en" data-scroll-behavior="smooth">
+            <head>
+                <meta name="baidu-site-verification" content="codeva-IbHDbJAeqx" />
+            </head>
             <body className="font-sans">
                 <I18nProvider>
                     <Navbar />

@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../ui/card.jsx";
 import { useI18n } from "../../lib/i18n-core.js";
 import { jobs } from "./work.data.js";
