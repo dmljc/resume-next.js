@@ -7,4 +7,4 @@ rsync -avz --exclude 'node_modules' \
   .next/ root@8.149.129.226:/var/www/resume-next/.next/
 # 重启应用
 ssh root@8.149.129.226 "cd /var/www/resume-next && pm2 restart resume-next"
-echo "部署完成！"
+echo "部署完成！当前时间：$(date '+%Y-%m-%d %H:%M:%S')"
