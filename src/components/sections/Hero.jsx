@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "../ui/button.jsx";
 import { ArrowRight } from "lucide-react";
 import { useI18n } from "../../lib/i18n-core.js";
@@ -60,11 +61,13 @@ export default function Hero() {
         </div>
         <div className="flex justify-center lg:justify-end">
           <div id="hero-avatar" className="relative z-10 rounded-full overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 h-40 w-40 sm:h-48 sm:w-48 md:h-60 md:w-60 lg:h-72 lg:w-72 xl:h-80 xl:w-80 3xl:h-96 3xl:w-96">
-            <img
-              src="./resume.webp"
-              alt="avatar"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              loading="lazy"
+            <Image
+              src="/resume.webp"
+              alt="张芳朝 - 前端开发工程师头像"
+              fill
+              sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 240px, (max-width: 1280px) 288px, 320px"
+              className="object-cover object-center"
+              priority
             />
           </div>
         </div>

@@ -2,10 +2,9 @@ let printLinkEl = null;
 
 export function loadPrintStyles() {
   if (printLinkEl) return printLinkEl;
-  const href = new URL('../styles/print.css', import.meta.url).href;
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = href;
+  link.href = '/print.css'; // 从 public 目录加载
   link.media = 'print';
   link.id = 'print-css';
   document.head.appendChild(link);
