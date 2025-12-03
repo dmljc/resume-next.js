@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="zh-CN" data-scroll-behavior="smooth" className={inter.variable}>
             <head>
-                <meta name="baidu-site-verification" content="codeva-IbHDbJAeqx" />
+                <meta name="baidu-site-verification" content="codeva-QQOH6jbw2U" />
             </head>
             <body className={`${inter.className} antialiased`}>
                 <I18nProvider>
