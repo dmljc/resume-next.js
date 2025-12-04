@@ -12,13 +12,13 @@ const inter = Inter({
 });
 
 export const metadata = {
-    // title: 搜索结果标题，建议 25-30 字符，突出核心身份和差异化优势
+    // title: 25-60 字符，核心关键词前置
     title: {
-        default: "张芳朝 | 9年资深前端开发工程师 - 三维可视化专家",
+        default: "张芳朝 - 全栈开发工程师 - 三维可视化 - 性能优化 - 系统重构",
         template: "%s | 张芳朝"
     },
-    // description: 搜索结果摘要，建议 80-120 字符，包含核心技能和价值主张
-    description: "专注三维可视化、性能优化、系统重构、中后台系统架构。",
+    // description: 80-160 字符，包含关键词 + 差异化优势 + 行动号召
+    description: "张芳朝，又名芳朝，全栈开发工程师。专注三维可视化、性能优化、系统重构、SSR服务端渲染与SEO优化。",
     authors: [{ name: "张芳朝", url: "https://zhangfc.cn" }],
     creator: "张芳朝",
     robots: {
