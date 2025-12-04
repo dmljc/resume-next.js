@@ -41,10 +41,10 @@ export const metadata = {
         type: "website",
         images: [
             {
-                url: "https://zhangfc.cn/resume.webp",
+                url: "https://zhangfc.cn/resume.webp", // 暂时使用现有图片，建议后续替换为长方形图片
                 width: 400,
                 height: 400,
-                alt: "张芳朝 - 前端开发工程师头像",
+                alt: "张芳朝 - 前端开发工程师",
             },
         ],
     },
@@ -60,9 +60,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "张芳朝",
+        "jobTitle": "前端开发工程师",
+        "url": "https://zhangfc.cn",
+        "image": "https://zhangfc.cn/resume.webp",
+        "sameAs": [
+            "https://zhangfc.cn"
+        ],
+        "description": "9年前端开发经验，专注三维可视化、性能优化、系统重构。"
+    };
+
     return (
         <html lang="zh-CN" data-scroll-behavior="smooth" className={inter.variable}>
-            <head></head>
+            <head>
+                <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            </head>
             <body className={`${inter.className} antialiased`}>
                 <I18nProvider>
                     <Navbar />

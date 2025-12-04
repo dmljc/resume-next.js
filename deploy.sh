@@ -4,6 +4,10 @@
 # 部署目标：阿里云 ECS + CDN
 # ===========================================
 
+# 加载 nvm 环境（解决 Cursor 终端找不到 node 的问题）
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # 服务器配置
 SERVER_IP="8.149.129.226"
 SERVER_USER="root"
