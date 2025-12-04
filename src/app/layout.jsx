@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata = {
     // title: 25-60 字符，核心关键词前置
     title: {
-        default: "张芳朝 - 全栈开发工程师 - 三维可视化 - 性能优化 - 系统重构",
+        default: "张芳朝(芳朝) - 全栈开发工程师 - 三维可视化 - 性能优化",
         template: "%s | 张芳朝"
     },
     // description: 80-160 字符，包含关键词 + 差异化优势 + 行动号召
