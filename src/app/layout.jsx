@@ -56,6 +56,7 @@ export const metadata = {
     },
     verification: {
         baidu: "codeva-fHq7JvMXY2",
+        google: "8Bzow2MWMxvOanjHF3mdlcSYqqU5CCi_e6Rawbr1n2k",
     },
 };
 

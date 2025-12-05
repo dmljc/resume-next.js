@@ -42,3 +42,6 @@ ssh ${SERVER_USER}@${SERVER_IP} "cd ${REMOTE_PATH} && pm2 restart resume-next"
 echo "✅ 部署完成！"
 echo "📅 时间：$(date '+%Y-%m-%d %H:%M:%S')"
 echo "🌐 访问：https://zhangfc.cn"
+
+
+google-site-verification=8Bzow2MWMxvOanjHF3mdlcSYqqU5CCi_e6Rawbr1n2k
