@@ -1,15 +1,7 @@
-import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
 import { I18nProvider } from "../lib/i18n";
 import "../index.css";
-
-// 使用 next/font 优化字体加载，避免 FOUT/FOIT 闪烁
-const inter = Inter({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-inter",
-});
 
 export const metadata = {
     // title: 25-60 字符，核心关键词前置
@@ -75,7 +67,7 @@ export default function RootLayout({ children }) {
     };
 
     return (
-        <html lang="zh-CN" data-scroll-behavior="smooth" className={inter.variable}>
+        <html lang="zh-CN" data-scroll-behavior="smooth">
             <head>
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
                 <script
@@ -83,7 +75,7 @@ export default function RootLayout({ children }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className={`${inter.className} antialiased`}>
+            <body className="font-sans antialiased">
                 <I18nProvider>
                     <Navbar />
                     {children}
