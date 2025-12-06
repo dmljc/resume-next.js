@@ -1,6 +1,27 @@
 // Shared work experience data for i18n rendering
 export const jobs = [
   {
+    company: { zh: "个人品牌官网项目", en: "Personal Brand Website Project" },
+    role: { zh: "独立开发者", en: "Independent Developer" },
+    time: { zh: "2024.11 至今", en: "Nov 2024 — Present" },
+    points: {
+      zh: [
+        "独立完成个人品牌官网从 0 到 1 的设计、开发、部署全流程；",
+        "基于 Next.js 16 + React 19 + Tailwind CSS 4 构建 SSR 服务端渲染应用，首屏加载 < 1s；",
+        "配置阿里云 ECS + CDN + Nginx 反向代理，实现 HTTPS 安全访问与高可用；",
+        "完成 SEO 全链路优化：sitemap.xml、robots.txt、JSON-LD 结构化数据、百度/Google 站长验证；",
+        "实现中英文国际化（i18n）、响应式多端适配、PM2 进程守护，保障服务 7×24 稳定运行；",
+      ],
+      en: [
+        "Independently completed full lifecycle of personal brand website: design, development, and deployment;",
+        "Built SSR application using Next.js 16 + React 19 + Tailwind CSS 4, achieving < 1s first-screen load;",
+        "Configured Alibaba Cloud ECS + CDN + Nginx reverse proxy for HTTPS secure access and high availability;",
+        "Implemented full SEO optimization: sitemap.xml, robots.txt, JSON-LD structured data, Baidu/Google webmaster verification;",
+        "Delivered i18n (Chinese/English), responsive multi-device support, and PM2 process management for 24/7 stable operation;",
+      ],
+    },
+  },
+  {
     company: { zh: "浙江图维科技股份有限公司", en: "Zhejiang TuWei Technology Co., Ltd." },
     role: { zh: "前端小组长", en: "Frontend Team Lead" },
     time: { zh: "2022.04 至今", en: "Apr 2022 — Present" },
@@ -61,14 +82,12 @@ export const jobs = [
     time: { zh: "2017.03 - 2020.02", en: "Mar 2017 — Feb 2020" },
     points: {
       zh: [
-        "负责客服工作平台核心模块开发与维护，技术栈为 Vue2 全家桶、Element UI、Git；",
-        "支撑 500+ 企业客户日常使用，优化异常处理机制，使系统稳定性达 96%+；",
-        "参与需求调研与技术方案设计，快速响应业务迭代，累计完成 20+ 核心功能开发；",
+        "负责内部客服工作平台核心模块开发，技术栈 Vue2 + Element UI，支撑 20+ 客服人员日常办公；",
+        "优化异常处理与性能瓶颈，系统稳定性达 96%+，累计完成 20+ 核心功能迭代；",
       ],
       en: [
-        "Developed and maintained core modules of the customer‑service platform using Vue 2 suite, Element UI, and Git;",
-        "Supported daily usage by 500+ enterprise customers; optimized exception handling to reach 96%+ system stability;",
-        "Participated in requirements research and technical solution design; delivered 20+ core features with rapid business iteration response;",
+        "Developed core modules of internal customer-service platform using Vue 2 + Element UI, supporting 20+ customer service staff;",
+        "Optimized exception handling and performance bottlenecks, achieving 96%+ system stability; delivered 20+ core feature iterations;",
       ],
     },
   },
