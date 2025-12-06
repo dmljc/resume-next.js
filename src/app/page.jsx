@@ -1,10 +1,10 @@
-import Hero from "../components/sections/Hero";
-import CoreSkills from "../components/sections/CoreSkills";
-import WorkTimeline from "../components/sections/WorkTimeline";
-import Education from "../components/sections/Education";
-import ContactGrid from "../components/sections/ContactGrid";
-import ScrollTopButton from "../components/ScrollTopButton";
-import SectionNav from "../components/SectionNav";
+import Hero from '../components/sections/Hero';
+import CoreSkills from '../components/sections/CoreSkills';
+import WorkTimeline from '../components/sections/WorkTimeline';
+import Education from '../components/sections/Education';
+import ContactGrid from '../components/sections/ContactGrid';
+import ScrollTopButton from '../components/ScrollTopButton';
+import SectionNav from '../components/SectionNav';
 
 export default function Home() {
     return (

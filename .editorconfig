@@ -1,0 +1,31 @@
+# EditorConfig 帮助开发者在不同编辑器间保持一致的编码风格
+# https://editorconfig.org
+
+root = true
+
+[*]
+# 字符编码
+charset = utf-8
+# 缩进风格：空格
+indent_style = space
+# 缩进大小
+indent_size = 4
+# 换行符
+end_of_line = lf
+# 文件末尾插入空行
+insert_final_newline = true
+# 删除行尾空格
+trim_trailing_whitespace = true
+
+# Markdown 文件保留行尾空格（用于换行）
+[*.md]
+trim_trailing_whitespace = false
+
+# JSON/YAML 使用 2 空格缩进
+[*.{json,yaml,yml}]
+indent_size = 2
+
+# Package.json 使用 2 空格缩进
+[package.json]
+indent_size = 2
+

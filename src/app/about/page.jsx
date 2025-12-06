@@ -1,21 +1,25 @@
-"use client";
+'use client';
 
-import * as React from 'react'
-import { useI18n } from '../../lib/i18n-core.js'
-import { Card, CardHeader, CardTitle, CardContent } from '../../components/ui/card.jsx'
+import * as React from 'react';
+import { useI18n } from '../../lib/i18n-core.js';
+import { Card, CardHeader, CardTitle, CardContent } from '../../components/ui/card.jsx';
 
 export default function AboutSite() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return (
         <main className="min-h-screen pt-16">
-            <section id="about-site" className="relative py-10 md:py-12" style={{
-                backgroundImage: `radial-gradient(1200px 800px at 10% 0%, hsl(var(--grad-from) / 0.25), transparent 60%),
+            <section
+                id="about-site"
+                className="relative py-10 md:py-12"
+                style={{
+                    backgroundImage: `radial-gradient(1200px 800px at 10% 0%, hsl(var(--grad-from) / 0.25), transparent 60%),
         radial-gradient(1000px 700px at 90% 10%, hsl(var(--grad-to) / 0.25), transparent 60%),
         radial-gradient(800px 500px at 50% 100%, hsl(var(--grad-alt) / 0.25), transparent 60%)`,
-                backgroundAttachment: 'fixed',
-                backgroundRepeat: 'no-repeat'
-            }}>
+                    backgroundAttachment: 'fixed',
+                    backgroundRepeat: 'no-repeat',
+                }}
+            >
                 <div className="hero-grid-overlay" />
                 <div className="container mx-auto max-w-6xl px-4">
                     <h1 className="text-2xl font-semibold mb-3 gradient-text">
@@ -39,20 +43,32 @@ export default function AboutSite() {
                                 <ul className="space-y-3">
                                     <li>
                                         <div>
-                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">{t('about.features.label.pages')}</span>
-                                            <span className="text-sm text-gray-600 dark:text-gray-400">{t('about.features.value.pages')}</span>
+                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+                                                {t('about.features.label.pages')}
+                                            </span>
+                                            <span className="text-sm text-gray-600 dark:text-gray-400">
+                                                {t('about.features.value.pages')}
+                                            </span>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">{t('about.features.label.experience')}</span>
-                                            <span className="text-sm text-gray-600 dark:text-gray-400">{t('about.features.value.experience')}</span>
+                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+                                                {t('about.features.label.experience')}
+                                            </span>
+                                            <span className="text-sm text-gray-600 dark:text-gray-400">
+                                                {t('about.features.value.experience')}
+                                            </span>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">{t('about.features.label.resume')}</span>
-                                            <span className="text-sm text-gray-600 dark:text-gray-400">{t('about.features.value.resume')}</span>
+                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+                                                {t('about.features.label.resume')}
+                                            </span>
+                                            <span className="text-sm text-gray-600 dark:text-gray-400">
+                                                {t('about.features.value.resume')}
+                                            </span>
                                         </div>
                                     </li>
                                 </ul>
@@ -69,13 +85,19 @@ export default function AboutSite() {
                             <CardContent className="pb-4">
                                 <ul className="space-y-3">
                                     <li>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{t('about.tech.item.react')}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {t('about.tech.item.react')}
+                                        </p>
                                     </li>
                                     <li>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{t('about.tech.item.tailwind')}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {t('about.tech.item.tailwind')}
+                                        </p>
                                     </li>
                                     <li>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{t('about.tech.item.i18n')}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {t('about.tech.item.i18n')}
+                                        </p>
                                     </li>
                                 </ul>
                             </CardContent>
@@ -91,13 +113,19 @@ export default function AboutSite() {
                             <CardContent className="pb-4">
                                 <ul className="space-y-3">
                                     <li>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{t('about.ops.item.oss')}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {t('about.ops.item.oss')}
+                                        </p>
                                     </li>
                                     <li>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{t('about.ops.item.ecs')}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {t('about.ops.item.ecs')}
+                                        </p>
                                     </li>
                                     <li>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{t('about.ops.item.sslcdn')}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {t('about.ops.item.sslcdn')}
+                                        </p>
                                     </li>
                                 </ul>
                             </CardContent>
@@ -107,5 +135,5 @@ export default function AboutSite() {
                 </div>
             </section>
         </main>
-    )
+    );
 }
