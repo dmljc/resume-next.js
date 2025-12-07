@@ -3,7 +3,7 @@ export const jobs = [
     {
         company: { zh: '个人品牌官网项目', en: 'Personal Brand Website Project' },
         role: { zh: '独立开发者', en: 'Independent Developer' },
-        time: { zh: '2024.11 至今', en: 'Nov 2024 — Present' },
+        time: { zh: '2025.11 至今', en: 'Nov 2025 — Present' },
         points: {
             zh: [
                 '独立完成个人品牌官网从 0 到 1 的设计、开发、部署全流程；',
@@ -24,7 +24,7 @@ export const jobs = [
     {
         company: { zh: '浙江图维科技股份有限公司', en: 'Zhejiang TuWei Technology Co., Ltd.' },
         role: { zh: '前端小组长', en: 'Frontend Team Lead' },
-        time: { zh: '2022.04 至今', en: 'Apr 2022 — Present' },
+        time: { zh: '2023.04 至今', en: 'Apr 2023 — Present' },
         points: {
             zh: [
                 '主导三维工井标注项目探索与落地，完成架构设计与需求分析；',
@@ -48,7 +48,7 @@ export const jobs = [
             en: 'Cloud Expo Co., Ltd. [Alibaba Subsidiary]',
         },
         role: { zh: '项目 Leader', en: 'Project Leader' },
-        time: { zh: '2021.07 至 2022.03', en: 'Jul 2021 — Mar 2022' },
+        time: { zh: '2021.07 至 2022.12', en: 'Jul 2021 — Dec 2022' },
         points: {
             zh: [
                 '主导 4 人前端小组常态研发与协作管理，制定统一技术规范，协作效率提升 30%；',
@@ -68,7 +68,7 @@ export const jobs = [
             en: 'Hangzhou GreenBay Network Technology Co., Ltd.',
         },
         role: { zh: '项目 Owner', en: 'Project Owner' },
-        time: { zh: '2020.02 - 2021.06', en: 'Feb 2020 — Jun 2021' },
+        time: { zh: '2020.02 - 2021.05', en: 'Feb 2020 — May 2021' },
         points: {
             zh: [
                 '主导数据治理中后台系统重构，技术栈涵盖 React、TypeScript、Webpack、ES6+；',
@@ -85,7 +85,7 @@ export const jobs = [
     {
         company: { zh: '北京汉克时代科技有限公司', en: 'Beijing Hank Times Technology Co., Ltd.' },
         role: { zh: '前端开发骨干', en: 'Key Frontend Developer' },
-        time: { zh: '2017.03 - 2020.02', en: 'Mar 2017 — Feb 2020' },
+        time: { zh: '2017.08 - 2020.01', en: 'Aug 2017 — Jan 2020' },
         points: {
             zh: [
                 '负责内部客服工作平台核心模块开发，技术栈 Vue2 + Element UI，支撑 20+ 客服人员日常办公；',
