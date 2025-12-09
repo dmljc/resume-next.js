@@ -34,10 +34,10 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                url: 'https://zhangfc.cn/resume.webp', // 暂时使用现有图片，建议后续替换为长方形图片
-                width: 400,
-                height: 400,
-                alt: '张芳朝 - 前端开发工程师',
+                url: 'https://zhangfc.cn/baidu-cover.jpg', // 长方形图片，用于百度/社交媒体出图
+                width: 484,
+                height: 300,
+                alt: '张芳朝 - 全栈开发工程师',
             },
         ],
     },
@@ -45,7 +45,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: '张芳朝 | 9年资深前端开发工程师',
         description: '专注三维可视化、性能优化、中后台系统架构，主导多个核心项目落地。',
-        images: ['https://zhangfc.cn/resume.webp'],
+        images: ['https://zhangfc.cn/baidu-cover.jpg'],
     },
     verification: {
         baidu: 'codeva-fHq7JvMXY2',
@@ -58,9 +58,9 @@ export default function RootLayout({ children }) {
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: '张芳朝',
-        jobTitle: '前端开发工程师',
+        jobTitle: '全栈开发工程师',
         url: 'https://zhangfc.cn',
-        image: 'https://zhangfc.cn/resume.webp',
+        image: 'https://zhangfc.cn/baidu-cover.jpg', // 长方形图片
         sameAs: ['https://zhangfc.cn'],
         description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
     };
