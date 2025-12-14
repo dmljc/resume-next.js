@@ -162,8 +162,8 @@ export const dict = {
 
     'about.ops.title': { zh: '部署架构', en: 'Deployment' },
     'about.ops.item.oss': {
-        zh: '静态资源托管于阿里云 OSS，结合 CDN 全球加速，实现毫秒级页面加载。',
-        en: 'Static assets hosted on Alibaba Cloud OSS with global CDN acceleration for millisecond page loads.',
+        zh: '静态资源托管于阿里云 ECS 服务器，结合 CDN 全球加速，实现毫秒级页面加载。',
+        en: 'Static assets hosted on Alibaba Cloud ECS servers with global CDN acceleration for millisecond page loads.',
     },
     'about.ops.item.ecs': {
         zh: '通过阿里云 ECS 完成 zhangfc.cn 域名备案，确保国内访问合规稳定。',
