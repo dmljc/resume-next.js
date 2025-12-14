@@ -67,7 +67,7 @@ export const dict = {
         en: 'Led multiple core projects; improved business efficiency and user experience',
     },
 
-    'hero.greeting': { zh: '你好，我是', en: 'Hi, I’m' },
+    'hero.greeting': { zh: '你好，我是', en: "Hi, I'm" },
     'hero.learn': { zh: '了解更多', en: 'Learn More' },
     'hero.contact': { zh: '联系我', en: 'Contact Me' },
     'hero.desc': {
@@ -126,52 +126,52 @@ export const dict = {
 
     // About Site page
     'about.intro': {
-        zh: '这是一个由 Trae 国际版 AI 编辑器开发、基于 React 的在线个人简历项目，托管于 zhangfc.cn 域名下（其中，“zhang”为作者姓氏的汉语拼音，“fc”为作者名字的拼音首字母）。',
-        en: 'This is an online resume project built with the Trae AI Editor (International Edition), implemented with React, and hosted at zhangfc.cn ("zhang" is the surname in pinyin; "fc" are the initials of the given name).',
+        zh: '这是一个基于 Next.js 构建的个人品牌官网，旨在以现代化的方式展示开发者的专业技能、工作经历与个人特色。站点托管于 zhangfc.cn 域名下（"zhang"为姓氏拼音，"fc"为名字首字母），采用 AI 辅助编程提升开发效率。',
+        en: 'This is a personal brand website built with Next.js, designed to showcase a developer\'s professional skills, work experience, and personal style in a modern way. Hosted at zhangfc.cn ("zhang" = surname in pinyin; "fc" = given name initials), developed with AI-assisted programming for enhanced efficiency.',
     },
-    'about.features.title': { zh: '项目功能', en: 'Features' },
-    'about.features.label.pages': { zh: '页面构成：', en: 'Pages:' },
+    'about.features.title': { zh: '核心功能', en: 'Core Features' },
+    'about.features.label.pages': { zh: '多页面结构：', en: 'Multi-page Structure:' },
     'about.features.value.pages': {
-        zh: '包含主页、在线简历、关于站点等。',
-        en: 'Includes Home, Online Resume, and About Site.',
+        zh: '包含个人主页（技能/经历/教育/联系方式）、在线简历页、关于站点页，内容丰富且结构清晰。',
+        en: 'Includes Home (skills/experience/education/contact), Online Resume, and About Site pages with rich content and clear structure.',
     },
-    'about.features.label.experience': { zh: '交互体验：', en: 'User Experience:' },
+    'about.features.label.experience': { zh: '极致体验：', en: 'Premium UX:' },
     'about.features.value.experience': {
-        zh: '支持中英文双语切换与亮色/暗色主题切换。',
-        en: 'Supports bilingual (Chinese/English) and light/dark theme switching.',
+        zh: '支持中/英双语无缝切换、亮色/暗色主题自适应、响应式布局适配多端设备。',
+        en: 'Seamless Chinese/English switching, adaptive light/dark themes, and responsive layout for all devices.',
     },
-    'about.features.label.resume': { zh: '简历操作：', en: 'Resume Actions:' },
+    'about.features.label.resume': { zh: '简历导出：', en: 'Resume Export:' },
     'about.features.value.resume': {
-        zh: '在线简历支持直接打印或导出为 PDF。',
-        en: 'The online resume supports printing and exporting to PDF.',
+        zh: '在线简历支持一键打印或导出为高质量 PDF，方便求职投递。',
+        en: 'One-click printing or high-quality PDF export from online resume for job applications.',
     },
 
-    'about.tech.title': { zh: '技术实现', en: 'Implementation' },
+    'about.tech.title': { zh: '技术架构', en: 'Tech Stack' },
     'about.tech.item.react': {
-        zh: '前端基于 React + React Router 构建，使用 Vite 打包。',
-        en: 'Built with React + React Router; bundled with Vite.',
+        zh: '基于 Next.js 16 + React 19 构建，采用 App Router 实现现代化路由与页面渲染。',
+        en: 'Built with Next.js 16 + React 19, using App Router for modern routing and page rendering.',
     },
     'about.tech.item.tailwind': {
-        zh: '采用 Tailwind CSS 实现响应式布局，兼容移动端与桌面端。',
-        en: 'Responsive layout via Tailwind CSS, compatible with mobile and desktop.',
+        zh: '采用 Tailwind CSS 4 实现原子化样式与响应式设计，搭配 CSS 变量实现主题切换。',
+        en: 'Atomic styling and responsive design with Tailwind CSS 4; theme switching via CSS custom properties.',
     },
     'about.tech.item.i18n': {
-        zh: '集成 i18next 实现国际化，使用浏览器原生打印功能实现 PDF 导出。',
-        en: 'Internationalization via i18next; PDF export via browser native print.',
+        zh: '自研轻量级 i18n 方案实现国际化，利用浏览器原生 API 实现打印与 PDF 导出。',
+        en: 'Lightweight custom i18n solution for internationalization; native browser APIs for printing and PDF export.',
     },
 
-    'about.ops.title': { zh: '部署与运维', en: 'Deployment & Ops' },
+    'about.ops.title': { zh: '部署架构', en: 'Deployment' },
     'about.ops.item.oss': {
-        zh: '项目部署于阿里云 OSS 静态存储。',
-        en: 'Deployed to Alibaba Cloud OSS static storage.',
+        zh: '静态资源托管于阿里云 OSS，结合 CDN 全球加速，实现毫秒级页面加载。',
+        en: 'Static assets hosted on Alibaba Cloud OSS with global CDN acceleration for millisecond page loads.',
     },
     'about.ops.item.ecs': {
-        zh: '为完成域名 zhangfc.cn 的备案，使用阿里云 ECS 服务器获取备案服务号。',
-        en: 'Used Alibaba Cloud ECS to obtain the ICP filing service code for the domain zhangfc.cn.',
+        zh: '通过阿里云 ECS 完成 zhangfc.cn 域名备案，确保国内访问合规稳定。',
+        en: 'Domain zhangfc.cn ICP filing completed via Alibaba Cloud ECS for compliant and stable access in China.',
     },
     'about.ops.item.sslcdn': {
-        zh: '通过配置 SSL 证书实现 HTTPS 访问，并启用 CDN 服务以提升访问性能。',
-        en: 'Configured an SSL certificate for HTTPS and enabled CDN to improve performance.',
+        zh: '全站 HTTPS 加密传输，配合 SSL 证书与 CDN 边缘节点，保障安全与性能。',
+        en: 'Full-site HTTPS encryption with SSL certificates and CDN edge nodes for security and performance.',
     },
 
     'experience.title': { zh: '工作经历', en: 'Experience' },
