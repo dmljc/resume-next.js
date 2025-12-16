@@ -24,3 +24,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# SSL 证书和敏感文件
+*.pem
+*.key
+*.crt
+*_nginx/
+*.cn_nginx/
+
+# 说明文档（保留 README.md）
+*配置说明.md
+*配置指南.md
+*指南.md
+面试题.md

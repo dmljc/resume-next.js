@@ -34,7 +34,15 @@ rsync -avz --delete .next/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/.next/
 echo "📤 上传 public 静态资源..."
 rsync -avz public/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/public/
 
-# 步骤4：重启 PM2 应用
+# 步骤4：更新 Nginx 配置
+echo "⚙️ 更新 Nginx 配置..."
+scp nginx-zhangfc.cn.conf ${SERVER_USER}@${SERVER_IP}:/etc/nginx/sites-available/zhangfc.cn
+
+# 步骤5：测试并重载 Nginx
+echo "🔧 测试 Nginx 配置..."
+ssh ${SERVER_USER}@${SERVER_IP} "nginx -t && systemctl reload nginx"
+
+# 步骤6：重启 PM2 应用
 echo "🔄 重启服务..."
 ssh ${SERVER_USER}@${SERVER_IP} "cd ${REMOTE_PATH} && pm2 restart resume-next"
 
