@@ -34,9 +34,10 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                url: 'https://zhangfc.cn/baidu-cover.jpg', // 长方形图片，用于百度/社交媒体出图
-                width: 484,
-                height: 300,
+                // 百度出图推荐尺寸：宽度 ≥ 800px
+                url: 'https://zhangfc.cn/baidu-cover.jpg',
+                width: 1200,
+                height: 744,
                 alt: '张芳朝 - 全栈开发工程师',
             },
         ],
@@ -60,7 +61,7 @@ export default function RootLayout({ children }) {
         name: '张芳朝',
         jobTitle: '全栈开发工程师',
         url: 'https://zhangfc.cn',
-        image: 'https://zhangfc.cn/baidu-cover.jpg', // 长方形图片
+        image: 'https://zhangfc.cn/baidu-cover.jpg',
         sameAs: ['https://zhangfc.cn'],
         description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
     };
@@ -69,6 +70,9 @@ export default function RootLayout({ children }) {
         <html lang="zh-CN" data-scroll-behavior="smooth">
             <head>
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
+                {/* 百度搜索出图优化：显式指定首选图片 */}
+                <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
