@@ -36,7 +36,7 @@ rsync -avz public/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/public/
 
 # 步骤4：更新 Nginx 配置
 echo "⚙️ 更新 Nginx 配置..."
-scp nginx-zhangfc.cn.conf ${SERVER_USER}@${SERVER_IP}:/etc/nginx/sites-available/zhangfc.cn
+scp resume-next.nginx.conf ${SERVER_USER}@${SERVER_IP}:/etc/nginx/sites-available/zhangfc.cn
 
 # 步骤5：测试并重载 Nginx
 echo "🔧 测试 Nginx 配置..."
