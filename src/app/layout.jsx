@@ -11,7 +11,9 @@ export const metadata = {
     },
     // description: 80-160 字符，包含关键词 + 差异化优势 + 行动号召
     description:
-        '张芳朝，又名芳朝，全栈开发工程师。专注三维可视化、性能优化、系统重构、SSR服务端渲染与SEO优化。',
+        '张芳朝（芳朝），全栈开发工程师。专注三维可视化、性能优化、系统重构、SSR服务端渲染与SEO优化。',
+    keywords:
+        '张芳朝,芳朝,张芳朝简历,芳朝简历,芳朝官网,全栈开发工程师,前端专家,三维可视化,性能优化',
     authors: [{ name: '张芳朝', url: 'https://zhangfc.cn' }],
     creator: '张芳朝',
     robots: {
@@ -20,6 +22,10 @@ export const metadata = {
         googleBot: {
             index: true,
             follow: true,
+        },
+        // 显式告知百度蜘蛛
+        other: {
+            baiduBot: 'index,follow',
         },
     },
     alternates: {
@@ -59,6 +65,7 @@ export default function RootLayout({ children }) {
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: '张芳朝',
+        alternateName: '芳朝',
         jobTitle: '全栈开发工程师',
         url: 'https://zhangfc.cn',
         image: 'https://zhangfc.cn/baidu-cover.jpg',
