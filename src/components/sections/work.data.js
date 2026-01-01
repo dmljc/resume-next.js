@@ -24,7 +24,7 @@ export const jobs = [
     },
     {
         project: { zh: '三维工井标注项目', en: '3D Well Annotation Project' },
-        company: { zh: '浙江图维科技股份有限公司', en: 'Zhejiang TuWei Technology Co., Ltd.' },
+        company: { zh: '图维科技', en: 'TuWei Technology' },
         role: { zh: '三维项目技术负责人', en: '3D Project Technical Lead' },
         time: { zh: '2023.04 至今', en: 'Apr 2023 — Present' },
         points: {
@@ -47,8 +47,8 @@ export const jobs = [
     {
         project: { zh: '展会工作台项目', en: 'Event Workbench Project' },
         company: {
-            zh: '云上会展有限公司【阿里子公司】',
-            en: 'Cloud Expo Co., Ltd. [Alibaba Subsidiary]',
+            zh: '云上会展【阿里】',
+            en: 'Cloud Expo [Alibaba]',
         },
         role: { zh: '项目 Leader', en: 'Project Leader' },
         time: { zh: '2021.07 至 2022.12', en: 'Jul 2021 — Dec 2022' },
@@ -68,8 +68,8 @@ export const jobs = [
     {
         project: { zh: '数据治理中台项目', en: 'Data Governance Middle Platform Project' },
         company: {
-            zh: '杭州绿湾网络科技有限公司',
-            en: 'Hangzhou GreenBay Network Technology Co., Ltd.',
+            zh: '绿湾网络',
+            en: 'GreenBay Network',
         },
         role: { zh: '项目 Owner', en: 'Project Owner' },
         time: { zh: '2020.02 - 2021.05', en: 'Feb 2020 — May 2021' },
@@ -88,7 +88,7 @@ export const jobs = [
     },
     {
         project: { zh: '客服工作平台项目', en: 'Customer Service Platform Project' },
-        company: { zh: '北京汉克时代科技有限公司', en: 'Beijing Hank Times Technology Co., Ltd.' },
+        company: { zh: '汉克时代', en: 'Hank Times' },
         role: { zh: '前端开发骨干', en: 'Key Frontend Developer' },
         time: { zh: '2017.08 - 2020.01', en: 'Aug 2017 — Jan 2020' },
         points: {
