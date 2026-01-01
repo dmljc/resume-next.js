@@ -22,17 +22,20 @@ export default function WorkTimeline() {
                 <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6">
                     {jobs.map(j => (
                         <Card
-                            key={j.company.zh}
+                            key={`${j.project?.zh ?? j.company.zh}-${j.time.zh}`}
                             className="text-card-foreground shadow-black/5 bg-card rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
                         >
                             <CardHeader className="pb-4">
                                 <div className="w-full">
                                     <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white break-words">
-                                        {j.company[lang]}
+                                        {(j.project ?? j.company)[lang]}
                                     </CardTitle>
                                     <div className="mt-1 flex items-center justify-between gap-2">
                                         <CardDescription className="text-base sm:text-lg text-gray-600 dark:text-gray-300 flex-1 min-w-0">
-                                            {j.role[lang]}
+                                            <span className="truncate">
+                                                {j.company?.[lang] ? `${j.company[lang]} · ` : ''}
+                                                {j.role[lang]}
+                                            </span>
                                         </CardDescription>
                                         <span className="text-sm sm:text-base whitespace-nowrap text-gray-500 dark:text-gray-500">
                                             {j.time[lang]}

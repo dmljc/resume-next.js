@@ -1,7 +1,8 @@
 // Shared work experience data for i18n rendering
 export const jobs = [
     {
-        company: { zh: '个人品牌官网项目', en: 'Personal Brand Website Project' },
+        project: { zh: '个人品牌官网项目', en: 'Personal Brand Website Project' },
+        company: { zh: '个人项目', en: 'Personal Project' },
         role: { zh: '独立开发者', en: 'Independent Developer' },
         time: { zh: '2025.11 至今', en: 'Nov 2025 — Present' },
         points: {
@@ -22,8 +23,9 @@ export const jobs = [
         },
     },
     {
+        project: { zh: '三维工井标注项目', en: '3D Well Annotation Project' },
         company: { zh: '浙江图维科技股份有限公司', en: 'Zhejiang TuWei Technology Co., Ltd.' },
-        role: { zh: '前端小组长', en: 'Frontend Team Lead' },
+        role: { zh: '三维项目技术负责人', en: '3D Project Technical Lead' },
         time: { zh: '2023.04 至今', en: 'Apr 2023 — Present' },
         points: {
             zh: [
@@ -43,6 +45,7 @@ export const jobs = [
         },
     },
     {
+        project: { zh: '展会工作台项目', en: 'Event Workbench Project' },
         company: {
             zh: '云上会展有限公司【阿里子公司】',
             en: 'Cloud Expo Co., Ltd. [Alibaba Subsidiary]',
@@ -63,6 +66,7 @@ export const jobs = [
         },
     },
     {
+        project: { zh: '数据治理中台项目', en: 'Data Governance Middle Platform Project' },
         company: {
             zh: '杭州绿湾网络科技有限公司',
             en: 'Hangzhou GreenBay Network Technology Co., Ltd.',
@@ -83,6 +87,7 @@ export const jobs = [
         },
     },
     {
+        project: { zh: '客服工作平台项目', en: 'Customer Service Platform Project' },
         company: { zh: '北京汉克时代科技有限公司', en: 'Beijing Hank Times Technology Co., Ltd.' },
         role: { zh: '前端开发骨干', en: 'Key Frontend Developer' },
         time: { zh: '2017.08 - 2020.01', en: 'Aug 2017 — Jan 2020' },

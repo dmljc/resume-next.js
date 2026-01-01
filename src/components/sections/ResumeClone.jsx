@@ -352,18 +352,24 @@ export default function ResumeClone() {
                                 <CardContent className="pb-5">
                                     <div className="space-y-8">
                                         {jobs.map(j => (
-                                            <div key={j.company.zh} className="relative pl-6">
+                                            <div
+                                                key={`${j.project?.zh ?? j.company.zh}-${j.time.zh}`}
+                                                className="relative pl-6"
+                                            >
                                                 <div className="absolute left-0 top-2 bottom-0 border-l-2 border-blue-500 dark:border-blue-400"></div>
                                                 <div className="absolute left-[-5px] top-1.5 w-3 h-3 rounded-full bg-blue-500 dark:bg-blue-400 ring-2 ring-white dark:ring-gray-800"></div>
                                                 <div className="flex items-center justify-between">
                                                     <h3 className="font-bold text-gray-800 dark:text-gray-200 break-words">
-                                                        {j.company[lang]}
+                                                        {(j.project ?? j.company)[lang]}
                                                     </h3>
                                                     <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
                                                         {j.time[lang]}
                                                     </span>
                                                 </div>
                                                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+                                                    {j.company?.[lang]
+                                                        ? `${j.company[lang]} · `
+                                                        : ''}
                                                     {j.role[lang]}
                                                 </p>
                                                 <ul className="mt-2 list-disc pl-4 space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
