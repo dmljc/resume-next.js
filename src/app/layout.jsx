@@ -40,10 +40,10 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                // 百度出图推荐尺寸：宽度 ≥ 800px
+                // 百度出图推荐比例 121:75，此处采用 1210x750 确保高清且符合比例
                 url: 'https://zhangfc.cn/baidu-cover.jpg',
-                width: 1200,
-                height: 744,
+                width: 1210,
+                height: 750,
                 alt: '张芳朝 - 全栈开发工程师',
             },
         ],
@@ -77,9 +77,12 @@ export default function RootLayout({ children }) {
         <html lang="zh-CN" data-scroll-behavior="smooth">
             <head>
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
-                {/* 百度搜索出图优化：显式指定首选图片 */}
+                {/* 百度搜索出图优化：强力指定 121:75 比例图片 */}
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
+                {/* 增加发布时间，有助于百度识别为“新鲜”内容，提高出图权重 */}
+                <meta property="og:release_date" content="2025-12-31" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
