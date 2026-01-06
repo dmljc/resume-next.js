@@ -6,14 +6,13 @@ import '../index.css';
 export const metadata = {
     // title: 25-60 字符，核心关键词前置
     title: {
-        default: '张芳朝(芳朝) - 全栈开发工程师 - 三维可视化 - 性能优化',
+        default: '张芳朝 | 全栈开发工程师 | 专注three.js 三维可视化与性能优化',
         template: '%s | 张芳朝',
     },
     // description: 80-160 字符，包含关键词 + 差异化优势 + 行动号召
     description:
-        '张芳朝（芳朝），全栈开发工程师。专注三维可视化、性能优化、系统重构、SSR服务端渲染与SEO优化。',
-    keywords:
-        '张芳朝,芳朝,张芳朝简历,芳朝简历,芳朝官网,全栈开发工程师,前端专家,三维可视化,性能优化',
+        '张芳朝，9年资深全栈开发工程师。专注 three.js 三维可视化、性能优化、系统重构、SSR服务端渲染。主导多个核心项目从0到1落地。',
+    keywords: '张芳朝,张芳朝简历,全栈开发工程师,前端专家,三维可视化,性能优化,React,Next.js',
     authors: [{ name: '张芳朝', url: 'https://zhangfc.cn' }],
     creator: '张芳朝',
     robots: {
@@ -32,15 +31,15 @@ export const metadata = {
         canonical: 'https://zhangfc.cn',
     },
     openGraph: {
-        title: '张芳朝 | 9年资深前端开发工程师',
-        description: '专注三维可视化、性能优化、中后台系统架构，主导多个核心项目落地。',
+        title: '张芳朝 | 9年资深全栈开发工程师',
+        description: '专注三维可视化、性能优化、系统重构，提供高质量的 web 技术解决方案。',
         url: 'https://zhangfc.cn',
-        siteName: '张芳朝个人简历',
+        siteName: '张芳朝个人官网',
         locale: 'zh_CN',
         type: 'website',
         images: [
             {
-                // 百度出图推荐比例 121:75，此处采用 1210x750 确保高清且符合比例
+                // 百度出图推荐比例 121:75
                 url: 'https://zhangfc.cn/baidu-cover.jpg',
                 width: 1210,
                 height: 750,
@@ -50,8 +49,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '张芳朝 | 9年资深前端开发工程师',
-        description: '专注三维可视化、性能优化、中后台系统架构，主导多个核心项目落地。',
+        title: '张芳朝 | 9年资深全栈开发工程师',
+        description: '专注三维可视化、性能优化、系统重构，提供高质量的 web 技术解决方案。',
         images: ['https://zhangfc.cn/baidu-cover.jpg'],
     },
     verification: {
@@ -61,28 +60,56 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: '张芳朝',
-        alternateName: '芳朝',
-        jobTitle: '全栈开发工程师',
-        url: 'https://zhangfc.cn',
-        image: 'https://zhangfc.cn/baidu-cover.jpg',
-        sameAs: ['https://zhangfc.cn'],
-        description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
-    };
+    const today = new Date().toISOString().split('T')[0];
+    const jsonLd = [
+        {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: '张芳朝',
+            jobTitle: '全栈开发工程师',
+            url: 'https://zhangfc.cn',
+            image: 'https://zhangfc.cn/baidu-cover.jpg',
+            sameAs: ['https://github.com/zhangfc', 'https://zhangfc.cn'],
+            description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '张芳朝个人官网',
+            url: 'https://zhangfc.cn',
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: '首页',
+                    item: 'https://zhangfc.cn/',
+                },
+                {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: '在线简历',
+                    item: 'https://zhangfc.cn/resume',
+                },
+            ],
+        },
+    ];
 
     return (
         <html lang="zh-CN" data-scroll-behavior="smooth">
             <head>
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
+                {/* 移动端适配声明 */}
+                <meta name="mobile-agent" content="format=html5;url=https://zhangfc.cn/" />
                 {/* 百度搜索出图优化：强力指定 121:75 比例图片 */}
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
                 {/* 增加发布时间，有助于百度识别为“新鲜”内容，提高出图权重 */}
-                <meta property="og:release_date" content="2025-12-31" />
+                <meta property="og:release_date" content={today} />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

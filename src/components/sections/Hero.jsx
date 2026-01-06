@@ -16,13 +16,13 @@ export default function Hero() {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32 grid gap-8 sm:gap-10 lg:gap-12 items-center lg:grid-cols-[2fr_1fr]">
                 <div>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                        {t('hero.greeting')}
-                    </h1>
-                    <div className="mt-2">
-                        <span className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text">
-                            {t('brand.name')}
+                        <span className="block">{t('hero.greeting')}</span>
+                        <span className="gradient-text">{t('brand.name')}</span>
+                        <span className="sr-only">
+                            {' '}
+                            - 全栈开发工程师 | 三维可视化 & 性能优化专家
                         </span>
-                    </div>
+                    </h1>
                     <div className="mt-5 text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl lg:max-w-none">
                         {desc.split('\n').map((line, idx) => {
                             let m;
