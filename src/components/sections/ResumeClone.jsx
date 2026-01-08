@@ -4,8 +4,7 @@ import * as React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card.jsx';
 import { Badge } from '../ui/badge.jsx';
 import { Button } from '../ui/button.jsx';
-import { Download, Printer, Loader2 } from 'lucide-react';
-import { printWithStyles } from '../../lib/printStyles.js';
+import { Download, Loader2 } from 'lucide-react';
 import { useI18n } from '../../lib/i18n-core.js';
 import { jobs } from './work.data.js';
 import { skills } from './skills.data.js';
@@ -18,7 +17,6 @@ export default function ResumeClone() {
     const { t, lang } = useI18n();
     const colon = lang === 'zh' ? '：' : ': ';
     const [downloading, setDownloading] = React.useState(false);
-    const [printing, setPrinting] = React.useState(false);
 
     return (
         <section
@@ -43,11 +41,11 @@ export default function ResumeClone() {
                         <Button
                             variant="outline"
                             className="flex items-center gap-2 rounded-md px-4 h-9 border-gray-400 text-gray-900 hover:bg-gray-100 hover:border-gray-500 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-800 dark:hover:border-gray-500 transition-colors no-print"
-                            disabled={downloading || printing}
+                            disabled={downloading}
                             style={{ opacity: downloading ? 1 : undefined }}
                             aria-busy={downloading ? true : undefined}
                             onClick={async () => {
-                                if (downloading || printing) return;
+                                if (downloading) return;
                                 setDownloading(true);
                                 try {
                                     // 使用浏览器原生打印功能（更可靠）
@@ -63,31 +61,6 @@ export default function ResumeClone() {
                                 <Download size={16} className="shrink-0" />
                             )}
                             <span>{t('resume.download')}</span>
-                        </Button>
-                        <Button
-                            variant="outline"
-                            className="flex items-center gap-2 rounded-md px-4 h-9 border-gray-400 text-gray-900 hover:bg-gray-100 hover:border-gray-500 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-800 dark:hover:border-gray-500 transition-colors no-print"
-                            disabled={downloading || printing}
-                            style={{ opacity: printing ? 1 : undefined }}
-                            aria-busy={printing ? true : undefined}
-                            onClick={() => {
-                                if (downloading || printing) return;
-                                setPrinting(true);
-                                // 监听打印对话框关闭事件
-                                const handleAfterPrint = () => {
-                                    setPrinting(false);
-                                    window.removeEventListener('afterprint', handleAfterPrint);
-                                };
-                                window.addEventListener('afterprint', handleAfterPrint);
-                                printWithStyles();
-                            }}
-                        >
-                            {printing ? (
-                                <Loader2 size={16} className="animate-spin shrink-0" />
-                            ) : (
-                                <Printer size={16} className="shrink-0" />
-                            )}
-                            <span>{t('resume.print')}</span>
                         </Button>
                     </div>
                 </div>
