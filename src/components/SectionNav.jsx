@@ -8,68 +8,46 @@ export default function SectionNav() {
 
     React.useEffect(() => {
         const sections = ['skills', 'experience', 'education', 'contact'];
-        let rafId = null;
-        const bandTop = 0.35;
-        const bandBottom = 0.35;
-
-        const pickActive = () => {
-            const vh = window.innerHeight;
-            const bandTopY = vh * bandTop;
-            const bandBottomY = vh * (1 - bandBottom);
-            const centerY = vh / 2;
-            let byOverlap = { id: null, overlap: 0, distance: Infinity };
-            let byTopEnter = null;
-            let nearest = { id: null, distance: Infinity };
-            for (const id of sections) {
-                const el = document.getElementById(id);
-                if (!el) continue;
-                const rect = el.getBoundingClientRect();
-                const overlap = Math.max(
-                    0,
-                    Math.min(rect.bottom, bandBottomY) - Math.max(rect.top, bandTopY)
-                );
-                const center = rect.top + rect.height / 2;
-                const distance = Math.abs(center - centerY);
-                if (
-                    overlap > byOverlap.overlap ||
-                    (overlap === byOverlap.overlap && distance < byOverlap.distance)
-                ) {
-                    byOverlap = { id, overlap, distance };
+        // 使用 IntersectionObserver 避免滚动时频繁 getBoundingClientRect() 触发布局计算（forced reflow）
+        const ratios = new Map();
+        const thresholds = Array.from({ length: 21 }, (_, i) => i / 20); // 0..1
+        const observer = new IntersectionObserver(
+            entries => {
+                for (const entry of entries) {
+                    const id = entry.target?.id;
+                    if (!id) continue;
+                    ratios.set(id, entry.isIntersecting ? entry.intersectionRatio : 0);
                 }
-                if (rect.top <= bandTopY) {
-                    byTopEnter = id;
+                // 选取“中心带”里交叉比例最高的 section
+                let bestId = null;
+                let bestRatio = 0;
+                for (const id of sections) {
+                    const r = ratios.get(id) ?? 0;
+                    if (r > bestRatio) {
+                        bestRatio = r;
+                        bestId = id;
+                    }
                 }
-                if (distance < nearest.distance) nearest = { id, distance };
+                setActiveSection(prev => (bestId && bestId !== prev ? bestId : prev));
+            },
+            {
+                // 视口上下各裁掉 35%，仅保留中间 30% 作为“激活带”
+                root: null,
+                rootMargin: '-35% 0px -35% 0px',
+                threshold: thresholds,
             }
-            return byOverlap.overlap > 0 ? byOverlap.id : byTopEnter || nearest.id || sections[0];
-        };
+        );
 
-        const update = () => {
-            const next = pickActive();
-            // 使用函数式更新避免依赖 activeSection
-            setActiveSection(prev => (next && next !== prev ? next : prev));
-        };
+        // 观察各 section
+        for (const id of sections) {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        }
 
-        const onScroll = () => {
-            if (rafId) cancelAnimationFrame(rafId);
-            rafId = requestAnimationFrame(update);
-        };
-        const onResize = () => {
-            if (rafId) cancelAnimationFrame(rafId);
-            rafId = requestAnimationFrame(update);
-        };
+        // 初始兜底：如果 observer 尚未触发，默认选中第一个
+        setActiveSection(prev => prev ?? sections[0]);
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', onResize, { passive: true });
-
-        // 初始计算，确保一开始就有选中态
-        update();
-
-        return () => {
-            window.removeEventListener('scroll', onScroll);
-            window.removeEventListener('resize', onResize);
-            if (rafId) cancelAnimationFrame(rafId);
-        };
+        return () => observer.disconnect();
     }, []);
 
     return (

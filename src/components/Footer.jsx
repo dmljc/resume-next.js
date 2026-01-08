@@ -28,6 +28,8 @@ export default function Footer({ fixed = false }) {
                             <img
                                 src="/备案图标.png"
                                 alt="公安局备案图标"
+                                width="14"
+                                height="14"
                                 className="h-3.5 w-auto shrink-0"
                             />
                             <span className="hidden sm:inline">公网安备：</span>

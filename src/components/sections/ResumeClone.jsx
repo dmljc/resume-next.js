@@ -100,6 +100,8 @@ export default function ResumeClone() {
                             <img
                                 src="/resume.webp"
                                 alt={t('brand.name')}
+                                width="160"
+                                height="160"
                                 className="w-full h-full object-cover avatar-image"
                             />
                         </div>
