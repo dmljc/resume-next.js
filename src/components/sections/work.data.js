@@ -29,14 +29,14 @@ export const jobs = [
         time: { zh: '2023.04 至今', en: 'Apr 2023 — Present' },
         points: {
             zh: [
-                '主导三维工井标注项目探索与落地，完成架构设计与需求分析；',
+                '主导工井标注与智慧大楼三维可视化项目落地，完成架构设计与需求分析；',
                 '基于 Three.js、Vue3、TypeScript、Vite 技术栈构建三维可视化能力；',
                 '优化三维模型渲染性能，模型加载速度提升 40%，复杂场景下交互更流畅；',
                 '沉淀 3 套通用组件与 5 份技术文档，后续项目开发成本降低 50%；',
                 '牵头三维技术方向能力建设，组织 6 场内部技术分享，培养 2 名核心开发人员；',
             ],
             en: [
-                'Led exploration and delivery of the 3D well‑annotation project; completed architecture design and requirements analysis;',
+                'Led well‑annotation and Smart Building 3D visualization projects to delivery; completed architecture design and requirements analysis;',
                 'Built 3D visualization capabilities using Three.js, Vue 3, TypeScript, and Vite;',
                 'Optimized 3D model rendering; improved loading speed by 40% and enabled smooth interaction in complex scenes;',
                 'Consolidated 3 reusable component sets and 5 technical documents, reducing subsequent project development costs by 50%;',
