@@ -40,7 +40,7 @@ export const metadata = {
         images: [
             {
                 // 百度出图推荐比例 121:75
-                url: 'https://zhangfc.cn/baidu-cover.jpg',
+                url: 'https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/baidu-cover.jpg',
                 width: 1210,
                 height: 750,
                 alt: '张芳朝 - 全栈开发工程师',
@@ -51,7 +51,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: '张芳朝 | 9年资深全栈开发工程师',
         description: '专注三维可视化、性能优化、系统重构，提供高质量的 web 技术解决方案。',
-        images: ['https://zhangfc.cn/baidu-cover.jpg'],
+        images: ['https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/baidu-cover.jpg'],
     },
     verification: {
         baidu: 'codeva-fHq7JvMXY2',
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
             name: '张芳朝',
             jobTitle: '全栈开发工程师',
             url: 'https://zhangfc.cn',
-            image: 'https://zhangfc.cn/baidu-cover.jpg',
+            image: 'https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/baidu-cover.jpg',
             sameAs: ['https://github.com/zhangfc', 'https://zhangfc.cn'],
             description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
         },
@@ -101,13 +101,26 @@ export default function RootLayout({ children }) {
     return (
         <html lang="zh-CN" data-scroll-behavior="smooth">
             <head>
+                <link
+                    rel="icon"
+                    href="https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/favicon.ico"
+                />
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
                 {/* 移动端适配声明 */}
                 <meta name="mobile-agent" content="format=html5;url=https://zhangfc.cn/" />
                 {/* 百度搜索出图优化：强力指定 121:75 比例图片 */}
-                <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
-                <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
-                <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta
+                    name="image"
+                    content="https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/baidu-cover.jpg"
+                />
+                <link
+                    rel="image_src"
+                    href="https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/baidu-cover.jpg"
+                />
+                <meta
+                    name="thumbnail"
+                    content="https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/baidu-cover.jpg"
+                />
                 {/* 增加发布时间，有助于百度识别为“新鲜”内容，提高出图权重 */}
                 <meta property="og:release_date" content={today} />
                 <script

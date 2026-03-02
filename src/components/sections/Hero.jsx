@@ -83,12 +83,13 @@ export default function Hero() {
                         className="relative z-10 rounded-full overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 h-40 w-40 sm:h-48 sm:w-48 md:h-60 md:w-60 lg:h-72 lg:w-72 xl:h-80 xl:w-80 3xl:h-96 3xl:w-96"
                     >
                         <Image
-                            src="/resume.webp"
+                            src="https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/resume.webp"
                             alt="张芳朝 - 前端开发工程师头像"
                             fill
                             sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 240px, (max-width: 1280px) 288px, 320px"
                             className="object-cover object-center"
                             priority
+                            unoptimized
                         />
                     </div>
                 </div>
