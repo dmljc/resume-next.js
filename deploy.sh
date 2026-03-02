@@ -30,9 +30,9 @@ fi
 echo "📤 上传 .next 构建产物..."
 rsync -avz --delete .next/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/.next/
 
-# 步骤3：上传静态资源文件夹
+# 步骤3：上传静态资源文件夹（--delete 使服务器 public 与本地一致，移除本地已删的文件）
 echo "📤 上传 public 静态资源..."
-rsync -avz public/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/public/
+rsync -avz --delete public/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/public/
 
 # 步骤4：更新 Nginx 配置
 echo "⚙️ 更新 Nginx 配置..."
