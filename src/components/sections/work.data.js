@@ -30,14 +30,14 @@ export const jobs = [
         points: {
             zh: [
                 '主导工井标注与智慧大楼三维可视化项目落地，完成架构设计与需求分析；',
-                '基于 Three.js、Vue3、TypeScript、Vite 技术栈构建三维可视化能力；',
+                '基于 Three.js、Vue3、TypeScript、Vite 构建三维可视化，Cursor AI 编码提效；',
                 '优化三维模型渲染性能，模型加载速度提升 40%，复杂场景下交互更流畅；',
                 '沉淀 3 套通用组件与 5 份技术文档，后续项目开发成本降低 50%；',
                 '牵头三维技术方向能力建设，组织 6 场内部技术分享，培养 2 名核心开发人员；',
             ],
             en: [
                 'Led well‑annotation and Smart Building 3D visualization projects to delivery; completed architecture design and requirements analysis;',
-                'Built 3D visualization capabilities using Three.js, Vue 3, TypeScript, and Vite;',
+                'Built 3D visualization with Three.js, Vue 3, TypeScript, and Vite; Cursor AI for coding efficiency;',
                 'Optimized 3D model rendering; improved loading speed by 40% and enabled smooth interaction in complex scenes;',
                 'Consolidated 3 reusable component sets and 5 technical documents, reducing subsequent project development costs by 50%;',
                 'Drove team capability building for 3D tech; organized 6 internal tech talks and mentored 2 core developers;',
