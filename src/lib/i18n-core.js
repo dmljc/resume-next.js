@@ -47,8 +47,8 @@ export const dict = {
     'advantages.label.stack': { zh: '【技术体系】', en: '[Tech Stack]' },
     'advantages.label.focus': { zh: '【特色领域】', en: '[Specialized Areas]' },
     'advantages.label.highlights': {
-        zh: '【项目亮点】',
-        en: '[Project Highlights]',
+        zh: '【AI 能力】',
+        en: '[AI Capabilities]',
     },
     'advantages.value.experience': {
         zh: '9 年前端开发，包含 4 年团队管理',
@@ -59,12 +59,12 @@ export const dict = {
         en: 'React, Vue, TypeScript, Three.js, Next.js, Nest.js, monorepo architecture, etc.',
     },
     'advantages.value.focus': {
-        zh: '三维可视化、中后台重构、性能优化、AI 辅助编程、AI Agent 自动化集成',
-        en: '3D visualization, admin‑system refactoring, performance optimization, AI‑assisted development, AI agent automation integration',
+        zh: '三维可视化、中后台重构、性能优化',
+        en: '3D visualization, admin‑system refactoring, performance optimization',
     },
     'advantages.value.highlights': {
-        zh: '主导多个核心项目落地，提升业务效率与用户体验',
-        en: 'Led multiple core projects; improved business efficiency and user experience',
+        zh: 'AI 辅助编程、AI Agent 自动化集成',
+        en: 'AI‑assisted development, AI agent automation integration',
     },
 
     'hero.greeting': { zh: '你好，我是', en: "Hi, I'm" },
