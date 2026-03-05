@@ -8,6 +8,9 @@ export const skills = [
             'Next.js',
             'TypeScript',
             { zh: '微信小程序', en: 'WeChat Mini Programs' },
+            // { zh: 'ECharts', en: 'ECharts' },
+            { zh: 'WebGL', en: 'WebGL' },
+            { zh: '微前端', en: 'Micro Frontends' },
         ],
     },
     {

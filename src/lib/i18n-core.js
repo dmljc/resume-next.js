@@ -51,16 +51,16 @@ export const dict = {
         en: '[Project Highlights]',
     },
     'advantages.value.experience': {
-        zh: '9 年前端开发 + 4 年团队管理',
-        en: '9 years in frontend development + 4 years in team leadership',
+        zh: '9 年前端开发，包含 4 年团队管理',
+        en: '9 years in frontend development, including 4 years in team leadership',
     },
     'advantages.value.stack': {
-        zh: 'React、Vue、Three.js、Next.js、Nest.js、TypeScript、Vite、Rollup',
-        en: 'React, Vue, Three.js, Next.js, Nest.js, TypeScript, Vite, Rollup',
+        zh: 'React、Vue、TypeScript、Three.js、Next.js、Nest.js、Monorepo 架构等',
+        en: 'React, Vue, TypeScript, Three.js, Next.js, Nest.js, monorepo architecture, etc.',
     },
     'advantages.value.focus': {
-        zh: '三维可视化、中后台重构、性能优化',
-        en: '3D visualization, admin‑system refactoring, performance optimization',
+        zh: '三维可视化、中后台重构、性能优化、AI 辅助编程、AI Agent 自动化集成',
+        en: '3D visualization, admin‑system refactoring, performance optimization, AI‑assisted development, AI agent automation integration',
     },
     'advantages.value.highlights': {
         zh: '主导多个核心项目落地，提升业务效率与用户体验',
@@ -71,8 +71,8 @@ export const dict = {
     'hero.learn': { zh: '了解更多', en: 'Learn More' },
     'hero.contact': { zh: '联系我', en: 'Contact Me' },
     'hero.desc': {
-        zh: '【专业经验】：9 年前端开发 + 4 年团队管理\n【技术体系】：React、Vue、Three.js、Next.js、Nest.js、TypeScript、Vite、Rollup\n【特色领域】：三维可视化、中后台重构、性能优化\n【结果导向】：主导多个核心项目落地，提升业务效率与用户体验',
-        en: 'Professional Experience: 9 years in frontend · 4 years in team leadership\nTech Stack: React, Vue, Three.js, Next.js, Nest.js, TypeScript, Vite, Rollup\nFocus Areas: 3D visualization, admin‑system refactoring, performance optimization\nOutcome‑Driven: Led multiple core projects; improved business efficiency and user experience',
+        zh: '【专业经验】：9 年前端开发，包含 4 年团队管理\n【技术体系】：React、Vue、TypeScript、Three.js、Next.js、Nest.js、Monorepo 架构\n【特色领域】：三维可视化、中后台重构、性能优化\n【AI 能力】：AI 辅助编程、AI Agent 自动化集成',
+        en: 'Professional Experience: 9 years in frontend, including 4 years in team leadership\nTech Stack: React, Vue, TypeScript, Three.js, Next.js, Nest.js, monorepo architecture\nFocus Areas: 3D visualization, admin‑system refactoring, performance optimization\nAI Capabilities: AI‑assisted development, AI agent automation integration',
     },
 
     'skills.title': { zh: '核心技能', en: 'Core Skills' },
@@ -86,8 +86,8 @@ export const dict = {
     'skills.backend': { zh: '后端技术', en: 'Backend' },
     'skills.management': { zh: '团队管理', en: 'Team Leadership' },
     'skills.frontend.desc': {
-        zh: '熟练掌握 React、Vue、Three.js、ES6+、TypeScript、微信小程序、AI 辅助编程 等。',
-        en: 'Expert: React, Vue 3, TypeScript, Three.js, ES6+; Proficient: WeChat Mini Programs, Webpack, Vite, Rollup; Familiar: Git, frontend performance optimization, cross‑platform adaptation.',
+        zh: '熟悉现代前端框架与工程化，涵盖三维、数据可视化、小程序与微前端，善用 AI 工具提效。',
+        en: 'Modern frontend and tooling, covering 3D & data visualization, mini‑programs and micro‑frontends, leveraging AI tools for efficient delivery.',
     },
     'skills.backend.desc': {
         zh: '掌握 Nest.js、Node.js、Nginx、MySQL；具备服务端开发、数据存储设计、接口设计能力。',

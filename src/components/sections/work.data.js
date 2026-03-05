@@ -9,37 +9,40 @@ export const jobs = [
             zh: [
                 '独立完成个人品牌官网从 0 到 1 的设计、开发、部署全流程；',
                 '基于 Next.js 16 + React 19 + Tailwind CSS 4 构建 SSR 服务端渲染应用，首屏加载 < 1s；',
-                '配置阿里云 ECS + CDN + Nginx 反向代理，实现 HTTPS 安全访问与高可用；',
+                '配置阿里云 ECS + OSS + CDN + Nginx 反向代理，结合 SSL 证书实现全站 HTTPS 安全访问与高可用；',
                 '完成 SEO 全链路优化：sitemap.xml、robots.txt、JSON-LD 结构化数据、百度/Google 站长验证；',
                 '实现中英文国际化（i18n）、响应式多端适配、PM2 进程守护，保障服务 7×24 稳定运行；',
             ],
             en: [
                 'Independently completed full lifecycle of personal brand website: design, development, and deployment;',
                 'Built SSR application using Next.js 16 + React 19 + Tailwind CSS 4, achieving < 1s first-screen load;',
-                'Configured Alibaba Cloud ECS + CDN + Nginx reverse proxy for HTTPS secure access and high availability;',
+                'Configured Alibaba Cloud ECS, OSS, CDN, and Nginx reverse proxy with SSL certificates to enable full‑site HTTPS and high availability;',
                 'Implemented full SEO optimization: sitemap.xml, robots.txt, JSON-LD structured data, Baidu/Google webmaster verification;',
                 'Delivered i18n (Chinese/English), responsive multi-device support, and PM2 process management for 24/7 stable operation;',
             ],
         },
     },
     {
-        project: { zh: '三维工井标注项目', en: '3D Well Annotation Project' },
+        project: {
+            zh: '3D 智慧园区数字孪生项目',
+            en: '3D Smart Campus Digital Twin Project',
+        },
         company: { zh: '图维科技', en: 'TuWei Technology' },
         role: { zh: '三维项目技术负责人', en: '3D Project Technical Lead' },
         time: { zh: '2023.04 至今', en: 'Apr 2023 — Present' },
         points: {
             zh: [
-                '主导工井标注与智慧大楼三维可视化项目落地，完成架构设计与需求分析；',
-                '基于 Three.js、Vue3、TypeScript、Vite 构建三维可视化，Cursor AI 编码提效；',
+                '主导工井标注与智慧大楼三维可视化项目落地，Cursor AI 辅助完成架构设计与需求分析；',
+                '基于 Monorepo 架构和 Three.js、WebGL、Vue3、TypeScript、Vite、Rollup 构建三维可视化应用；',
                 '优化三维模型渲染性能，模型加载速度提升 40%，复杂场景下交互更流畅；',
-                '沉淀 3 套通用组件与 5 份技术文档，后续项目开发成本降低 50%；',
+                '沉淀 TThree 三维基座，统一 TypeDoc 注释规范，并通过 VitePress 自动生成技术文档；',
                 '牵头三维技术方向能力建设，组织 6 场内部技术分享，培养 2 名核心开发人员；',
             ],
             en: [
-                'Led well‑annotation and Smart Building 3D visualization projects to delivery; completed architecture design and requirements analysis;',
-                'Built 3D visualization with Three.js, Vue 3, TypeScript, and Vite; Cursor AI for coding efficiency;',
+                'Led well‑annotation and Smart Building 3D visualization projects to delivery; used Cursor AI to assist with architecture design and requirements analysis;',
+                'Built 3D visualization applications on a monorepo architecture using Three.js, WebGL, Vue 3, TypeScript, Vite, and Rollup;',
                 'Optimized 3D model rendering; improved loading speed by 40% and enabled smooth interaction in complex scenes;',
-                'Consolidated 3 reusable component sets and 5 technical documents, reducing subsequent project development costs by 50%;',
+                'Built the TThree 3D foundation library, standardized TypeDoc comments, and auto‑generated technical documentation with VitePress;',
                 'Drove team capability building for 3D tech; organized 6 internal tech talks and mentored 2 core developers;',
             ],
         },
@@ -55,12 +58,12 @@ export const jobs = [
         points: {
             zh: [
                 '主导 4 人前端小组常态研发与协作管理，制定统一技术规范，协作效率提升 30%；',
-                '基于 React、TypeScript、Webpack 技术栈，展会工作台首屏从 10s 压缩至 2.5s；',
+                '基于 React、TypeScript、Webpack、CDN 技术栈，把展会工作台首屏加载时间从 10s 压缩至 2.5s；',
                 '优化后用户留存率提升 25%，支撑展会期间日均 10 万+ 访问量稳定运行；',
             ],
             en: [
                 'Led a 4‑person frontend team’s daily development and collaboration; established unified technical standards, improving collaboration efficiency by 30%;',
-                'Using React, TypeScript, and Webpack, reduced the workbench first‑screen load from 10s to 2.5s;',
+                'Using React, TypeScript, Webpack, and CDN, reduced the workbench first‑screen loading time from 10s to 2.5s;',
                 'Post‑optimization, increased user retention by 25% and supported 100k+ daily visits during events with stable performance;',
             ],
         },
@@ -93,11 +96,11 @@ export const jobs = [
         time: { zh: '2017.08 - 2020.01', en: 'Aug 2017 — Jan 2020' },
         points: {
             zh: [
-                '负责内部客服工作平台核心模块开发，技术栈 Vue2 + Element UI，支撑 20+ 客服人员日常办公；',
+                '负责内部客服工作平台核心模块开发，技术栈 Vue2、Element UI、ECharts，支撑 20+ 客服人员日常办公；',
                 '优化异常处理与性能瓶颈，系统稳定性达 96%+，累计完成 20+ 核心功能迭代；',
             ],
             en: [
-                'Developed core modules of internal customer-service platform using Vue 2 + Element UI, supporting 20+ customer service staff;',
+                'Developed core modules of internal customer-service platform using Vue 2, Element UI, and ECharts, supporting 20+ customer service staff;',
                 'Optimized exception handling and performance bottlenecks, achieving 96%+ system stability; delivered 20+ core feature iterations;',
             ],
         },
