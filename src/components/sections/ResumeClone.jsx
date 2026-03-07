@@ -32,7 +32,7 @@ export default function ResumeClone() {
         >
             <div className="hero-grid-overlay" />
             <div className="container mx-auto max-w-6xl px-4 print-area">
-                <div className="flex items-center justify-between mb-10">
+                <div className="flex items-center justify-between mb-10 no-print">
                     <h1 className="text-2xl font-bold">{t('nav.resume')}</h1>
                     <div
                         className="flex items-center gap-3 print-hidden"
