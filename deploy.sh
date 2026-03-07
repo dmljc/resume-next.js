@@ -25,24 +25,32 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 步骤2：上传构建产物到服务器
+# 步骤2：上传运行时必需的配置文件
+echo "📤 上传配置文件..."
+scp package.json pnpm-lock.yaml next.config.mjs ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/
+
+# 步骤3：上传构建产物到服务器
 # --delete 选项会删除服务器上多余的文件，保持同步
 echo "📤 上传 .next 构建产物..."
 rsync -avz --delete .next/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/.next/
 
-# 步骤3：上传静态资源文件夹（--delete 使服务器 public 与本地一致，移除本地已删的文件）
+# 步骤4：上传静态资源文件夹（--delete 使服务器 public 与本地一致，移除本地已删的文件）
 echo "📤 上传 public 静态资源..."
 rsync -avz --delete public/ ${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/public/
 
-# 步骤4：更新 Nginx 配置
+# 步骤5：安装生产依赖（仅当 pnpm-lock.yaml 变化时才实际下载）
+echo "📦 安装生产依赖..."
+ssh ${SERVER_USER}@${SERVER_IP} "cd ${REMOTE_PATH} && pnpm install --prod --ignore-scripts"
+
+# 步骤6：更新 Nginx 配置
 echo "⚙️ 更新 Nginx 配置..."
 scp resume-next.nginx.conf ${SERVER_USER}@${SERVER_IP}:/etc/nginx/sites-available/zhangfc.cn
 
-# 步骤5：测试并重载 Nginx
+# 步骤7：测试并重载 Nginx
 echo "🔧 测试 Nginx 配置..."
 ssh ${SERVER_USER}@${SERVER_IP} "nginx -t && systemctl reload nginx"
 
-# 步骤6：重启 PM2 应用
+# 步骤8：重启 PM2 应用
 echo "🔄 重启服务..."
 ssh ${SERVER_USER}@${SERVER_IP} "cd ${REMOTE_PATH} && pm2 restart resume-next"
 
