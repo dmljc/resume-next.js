@@ -33,7 +33,7 @@ export default function WorkTimeline() {
                                     <div className="mt-1 flex items-center justify-between gap-2">
                                         <CardDescription className="text-base sm:text-lg text-gray-600 dark:text-gray-300 flex-1 min-w-0">
                                             <span className="truncate">
-                                                {j.company?.[lang] ? `${j.company[lang]} · ` : ''}
+                                                {j.company?.[lang] ? `${j.company[lang]}·` : ''}
                                                 {j.role[lang]}
                                             </span>
                                         </CardDescription>
