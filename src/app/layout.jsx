@@ -107,9 +107,9 @@ export default function RootLayout({ children }) {
                 {/* 移动端适配声明 */}
                 <meta name="mobile-agent" content="format=html5;url=https://zhangfc.cn/" />
                 {/* 百度搜索出图优化：强力指定 121:75 比例图片 */}
-                <meta name="image" content="/baidu-cover.jpg" />
-                <link rel="image_src" href="/baidu-cover.jpg" />
-                <meta name="thumbnail" content="/baidu-cover.jpg" />
+                <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
                 {/* 增加发布时间，有助于百度识别为“新鲜”内容，提高出图权重 */}
                 <meta property="og:release_date" content={today} />
                 <script
