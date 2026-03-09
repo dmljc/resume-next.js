@@ -71,7 +71,7 @@ export default function ResumeClone() {
                         <div className="relative w-40 h-40 rounded-full bg-gray-100 dark:bg-gray-800 overflow-hidden ring-4 ring-white dark:ring-gray-700 shadow-md">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/resume.webp"
+                                src="/resume.webp"
                                 alt={t('brand.name')}
                                 width="160"
                                 height="160"
