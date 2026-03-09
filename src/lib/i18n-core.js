@@ -71,8 +71,8 @@ export const dict = {
     'hero.learn': { zh: '了解更多', en: 'Learn More' },
     'hero.contact': { zh: '联系我', en: 'Contact Me' },
     'hero.desc': {
-        zh: '【专业经验】：9 年前端开发，包含 4 年团队管理\n【技术体系】：React、Vue、TypeScript、Three.js、Next.js、Nest.js、Monorepo 架构\n【特色领域】：三维可视化、中后台重构、性能优化\n【AI 能力】：AI 辅助编程、AI Agent 自动化集成',
-        en: 'Professional Experience: 9 years in frontend, including 4 years in team leadership\nTech Stack: React, Vue, TypeScript, Three.js, Next.js, Nest.js, monorepo architecture\nFocus Areas: 3D visualization, admin‑system refactoring, performance optimization\nAI Capabilities: AI‑assisted development, AI agent automation integration',
+        zh: '【专业经验】：9 年前端开发，包含 4 年团队管理\n【技术体系】：React、React Hooks、Vue、TypeScript、Three.js、Next.js (SSR)、Nest.js、Monorepo ...\n【特色领域】：三维可视化、中后台重构、性能优化\n【AI 能力】：AI 辅助编程、AI Agent 自动化集成',
+        en: 'Professional Experience: 9 years in frontend, including 4 years in team leadership\nTech Stack: React, React Hooks, Vue, TypeScript, Three.js, Next.js (SSR), Nest.js, monorepo architecture, etc.\nFocus Areas: 3D visualization, admin‑system refactoring, performance optimization\nAI Capabilities: AI‑assisted development, AI agent automation integration',
     },
 
     'skills.title': { zh: '核心技能', en: 'Core Skills' },
