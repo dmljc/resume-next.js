@@ -55,8 +55,8 @@ export const dict = {
         en: '9 years in frontend development, including 4 years in team leadership',
     },
     'advantages.value.stack': {
-        zh: 'React、Vue、TypeScript、Three.js、Next.js、Nest.js、Monorepo 架构等',
-        en: 'React, Vue, TypeScript, Three.js, Next.js, Nest.js, monorepo architecture, etc.',
+        zh: 'React、React Hooks、Vue、TypeScript、Three.js、Next.js (SSR)、Nest.js、Monorepo ...',
+        en: 'React, React Hooks, Vue, TypeScript, Three.js, Next.js (SSR), Nest.js, monorepo architecture, etc.',
     },
     'advantages.value.focus': {
         zh: '三维可视化、中后台重构、性能优化',

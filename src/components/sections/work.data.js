@@ -58,12 +58,12 @@ export const jobs = [
         points: {
             zh: [
                 '主导 4 人前端小组常态研发与协作管理，制定统一技术规范，协作效率提升 30%；',
-                '基于 React、TypeScript、Webpack、CDN 技术栈，把展会工作台首屏加载时间从 10s 压缩至 2.5s；',
+                '基于 React、React Hooks、TypeScript、Echarts、Webpack 等，把首屏加载时间从 10s 压缩至 2.5s；',
                 '优化后用户留存率提升 25%，支撑展会期间日均 10 万+ 访问量稳定运行；',
             ],
             en: [
                 'Led a 4‑person frontend team’s daily development and collaboration; established unified technical standards, improving collaboration efficiency by 30%;',
-                'Using React, TypeScript, Webpack, and CDN, reduced the workbench first‑screen loading time from 10s to 2.5s;',
+                'Using React, React Hooks, TypeScript, ECharts, and Webpack, reduced the first‑screen loading time from 10s to 2.5s;',
                 'Post‑optimization, increased user retention by 25% and supported 100k+ daily visits during events with stable performance;',
             ],
         },
@@ -78,12 +78,12 @@ export const jobs = [
         time: { zh: '2020.02 - 2021.05', en: 'Feb 2020 — May 2021' },
         points: {
             zh: [
-                '主导数据治理中后台系统重构，技术栈涵盖 React、TypeScript、Webpack、ES6+；',
+                '主导数据治理中后台系统重构，技术栈涵盖 React、React Hooks、D3.js、AntV、JavaScript、Webpack、ES6+；',
                 '优化数据处理流程与接口设计，效率提升 60%，显著降低人工操作成本；',
                 '项目成果助力团队获得公司季度 3.75 最高绩效，成为内部系统重构标杆；',
             ],
             en: [
-                'Led the refactoring of the data‑governance admin system using React, TypeScript, Webpack, and ES6+;',
+                'Led the refactoring of the data‑governance admin system using React, React Hooks, D3.js, AntV, JavaScript, Webpack, and ES6+;',
                 'Optimized data processing workflows and API design, improving efficiency by 60% and reducing manual operation costs;',
                 'The project helped the team achieve the company’s top quarterly performance rating of 3.75, becoming a benchmark for internal system refactoring;',
             ],
@@ -96,11 +96,11 @@ export const jobs = [
         time: { zh: '2017.08 - 2020.01', en: 'Aug 2017 — Jan 2020' },
         points: {
             zh: [
-                '负责内部客服工作平台核心模块开发，技术栈 Vue2、Element UI、ECharts，支撑 20+ 客服人员日常办公；',
+                '负责内部客服工作平台核心模块开发，技术栈 Vue2、Element UI、JavaScript、G2，支撑 20+ 客服人员日常办公；',
                 '优化异常处理与性能瓶颈，系统稳定性达 96%+，累计完成 20+ 核心功能迭代；',
             ],
             en: [
-                'Developed core modules of internal customer-service platform using Vue 2, Element UI, and ECharts, supporting 20+ customer service staff;',
+                'Developed core modules of internal customer-service platform using Vue 2, Element UI, JavaScript, and G2, supporting 20+ customer service staff;',
                 'Optimized exception handling and performance bottlenecks, achieving 96%+ system stability; delivered 20+ core feature iterations;',
             ],
         },
