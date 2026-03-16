@@ -40,10 +40,10 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                // 百度出图推荐比例 121:75
+                // 百度出图推荐比例 121:75，实际尺寸 605×375
                 url: '/baidu-cover.jpg',
-                width: 1210,
-                height: 750,
+                width: 605,
+                height: 375,
                 alt: '张芳朝 - 全栈开发工程师',
             },
         ],
@@ -110,8 +110,14 @@ export default function RootLayout({ children }) {
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
-                {/* 增加发布时间，有助于百度识别为“新鲜”内容，提高出图权重 */}
+                {/* 百度专用缩略图标签 */}
+                <meta name="og:image" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta name="twitter:image" content="https://zhangfc.cn/baidu-cover.jpg" />
+                {/* 百度熊掌号图片要求（虽然熊掌号已下线，但部分标签仍有效） */}
+                <link rel="apple-touch-icon" href="/baidu-cover.jpg" />
+                {/* 增加发布时间，有助于百度识别为"新鲜"内容，提高出图权重 */}
                 <meta property="og:release_date" content={today} />
+                {/* 结构化数据 - Person 类型，帮助百度理解网站主体 */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
