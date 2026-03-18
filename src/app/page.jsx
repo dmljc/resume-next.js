@@ -14,6 +14,17 @@ export const metadata = {
     alternates: {
         canonical: 'https://zhangfc.cn',
     },
+    openGraph: {
+        images: [
+            {
+                url: 'https://zhangfc.cn/baidu-cover.jpg',
+                width: 1200,
+                height: 744,
+                alt: '张芳朝 - 全栈开发工程师 | 专注三维可视化与性能优化',
+                type: 'image/jpeg',
+            },
+        ],
+    },
 };
 
 export default function Home() {

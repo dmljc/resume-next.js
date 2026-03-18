@@ -11,7 +11,15 @@ export default function Hero() {
     const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     return (
         <section id="home" className="relative overflow-hidden">
-            {/* 背景栅格质感覆盖 */}
+            {/* 搜索引擎出图：121:75 比例封面图，sr-only 对爬虫可见 */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                src="/baidu-cover.jpg"
+                alt="张芳朝 - 全栈开发工程师 | 专注三维可视化与性能优化"
+                width="1200"
+                height="744"
+                className="sr-only"
+            />
             <div className="hero-grid-overlay" />
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32 grid gap-8 sm:gap-10 lg:gap-12 items-center lg:grid-cols-[2fr_1fr]">
                 <div>

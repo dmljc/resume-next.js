@@ -40,11 +40,11 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                // 百度出图推荐比例 121:75，实际尺寸 605×375
-                url: '/baidu-cover.jpg',
-                width: 605,
-                height: 375,
+                url: 'https://zhangfc.cn/baidu-cover.jpg',
+                width: 1200,
+                height: 744,
                 alt: '张芳朝 - 全栈开发工程师',
+                type: 'image/jpeg',
             },
         ],
     },
@@ -52,7 +52,14 @@ export const metadata = {
         card: 'summary_large_image',
         title: '张芳朝 | 9年资深全栈开发工程师',
         description: '专注三维可视化、性能优化、系统重构，提供高质量的 web 技术解决方案。',
-        images: ['/baidu-cover.jpg'],
+        images: [
+            {
+                url: 'https://zhangfc.cn/baidu-cover.jpg',
+                width: 1200,
+                height: 744,
+                alt: '张芳朝 - 全栈开发工程师',
+            },
+        ],
     },
     verification: {
         baidu: 'codeva-fHq7JvMXY2',
@@ -69,7 +76,12 @@ export default function RootLayout({ children }) {
             name: '张芳朝',
             jobTitle: '全栈开发工程师',
             url: 'https://zhangfc.cn',
-            image: 'https://zhangfc.cn/baidu-cover.jpg',
+            image: {
+                '@type': 'ImageObject',
+                url: 'https://zhangfc.cn/baidu-cover.jpg',
+                width: 1200,
+                height: 744,
+            },
             sameAs: ['https://github.com/zhangfc', 'https://zhangfc.cn'],
             description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
         },
@@ -104,20 +116,13 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
-                {/* 移动端适配声明 */}
                 <meta name="mobile-agent" content="format=html5;url=https://zhangfc.cn/" />
-                {/* 百度搜索出图优化：强力指定 121:75 比例图片 */}
+                {/* 辅助百度出图 */}
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
-                {/* 百度专用缩略图标签 */}
-                <meta name="og:image" content="https://zhangfc.cn/baidu-cover.jpg" />
-                <meta name="twitter:image" content="https://zhangfc.cn/baidu-cover.jpg" />
-                {/* 百度熊掌号图片要求（虽然熊掌号已下线，但部分标签仍有效） */}
                 <link rel="apple-touch-icon" href="/baidu-cover.jpg" />
-                {/* 增加发布时间，有助于百度识别为"新鲜"内容，提高出图权重 */}
-                <meta property="og:release_date" content={today} />
-                {/* 结构化数据 - Person 类型，帮助百度理解网站主体 */}
+                <meta property="og:updated_time" content={today} />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
