@@ -19,9 +19,11 @@ export const metadata = {
     robots: {
         index: true,
         follow: true,
+        maxImagePreview: 'large',
         googleBot: {
             index: true,
             follow: true,
+            maxImagePreview: 'large',
         },
         // 显式告知百度蜘蛛
         other: {
@@ -69,6 +71,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     const today = new Date().toISOString().split('T')[0];
+    const coverImage = {
+        '@type': 'ImageObject',
+        url: 'https://zhangfc.cn/baidu-cover.jpg',
+        width: 1200,
+        height: 744,
+        caption: '张芳朝个人官网首页封面图',
+    };
+    const profileImage = {
+        '@type': 'ImageObject',
+        url: 'https://zhangfc.cn/resume.webp',
+        width: 400,
+        height: 400,
+        caption: '张芳朝个人头像',
+    };
     const jsonLd = [
         {
             '@context': 'https://schema.org',
@@ -76,12 +92,7 @@ export default function RootLayout({ children }) {
             name: '张芳朝',
             jobTitle: '全栈开发工程师',
             url: 'https://zhangfc.cn',
-            image: {
-                '@type': 'ImageObject',
-                url: 'https://zhangfc.cn/baidu-cover.jpg',
-                width: 1200,
-                height: 744,
-            },
+            image: profileImage,
             sameAs: ['https://github.com/zhangfc', 'https://zhangfc.cn'],
             description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
         },
@@ -90,6 +101,19 @@ export default function RootLayout({ children }) {
             '@type': 'WebSite',
             name: '张芳朝个人官网',
             url: 'https://zhangfc.cn',
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: '张芳朝 | 全栈开发工程师 | 专注三维可视化与性能优化',
+            url: 'https://zhangfc.cn',
+            primaryImageOfPage: coverImage,
+            image: [coverImage, profileImage],
+            about: {
+                '@type': 'Person',
+                name: '张芳朝',
+                url: 'https://zhangfc.cn',
+            },
         },
         {
             '@context': 'https://schema.org',
