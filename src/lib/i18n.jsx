@@ -36,14 +36,6 @@ export function I18nProvider({ children }) {
         setLang(nextLang);
     }, [lang]);
 
-    if (!mounted) {
-        return (
-            <I18nContext.Provider value={{ lang: 'zh', setLang, toggleLang, t }}>
-                <div style={{ visibility: 'hidden' }}>{children}</div>
-            </I18nContext.Provider>
-        );
-    }
-
     return (
         <I18nContext.Provider value={{ lang, setLang, toggleLang, t }}>
             {children}

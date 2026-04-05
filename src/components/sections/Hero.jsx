@@ -8,20 +8,23 @@ import { useI18n } from '../../lib/i18n-core.js';
 export default function Hero() {
     const { t, lang } = useI18n();
     const desc = t('hero.desc');
+    const coverAlt = '张芳朝 - 全栈开发工程师 | 专注三维可视化与性能优化';
     const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     return (
         <section id="home" className="relative overflow-hidden">
-            {/* 搜索引擎出图：121:75 比例封面图，sr-only 对爬虫可见 */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-                src="/baidu-cover.jpg"
-                alt="张芳朝 - 全栈开发工程师 | 专注三维可视化与性能优化"
-                width="1200"
-                height="744"
-                className="sr-only"
-            />
             <div className="hero-grid-overlay" />
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32 grid gap-8 sm:gap-10 lg:gap-12 items-center lg:grid-cols-[2fr_1fr]">
+                <figure className="relative lg:col-span-2 h-44 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-700 shadow-lg">
+                    <Image
+                        src="/baidu-cover.jpg"
+                        alt={coverAlt}
+                        fill
+                        priority
+                        unoptimized
+                        sizes="(max-width: 1024px) 100vw, 1280px"
+                        className="object-cover object-center"
+                    />
+                </figure>
                 <div>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                         <span className="block">{t('hero.greeting')}</span>
