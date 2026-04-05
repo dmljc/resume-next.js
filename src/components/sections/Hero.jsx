@@ -12,9 +12,11 @@ export default function Hero() {
     const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     return (
         <section id="home" className="relative overflow-hidden">
-            <div className="hero-grid-overlay" />
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32 grid gap-8 sm:gap-10 lg:gap-12 items-center lg:grid-cols-[2fr_1fr]">
-                <figure className="relative lg:col-span-2 h-44 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-700 shadow-lg">
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 top-0 flex justify-center"
+            >
+                <div className="relative h-40 sm:h-48 md:h-56 w-full max-w-6xl overflow-hidden rounded-b-[2.5rem] opacity-[0.06]">
                     <Image
                         src="/baidu-cover.jpg"
                         alt={coverAlt}
@@ -22,9 +24,13 @@ export default function Hero() {
                         priority
                         unoptimized
                         sizes="(max-width: 1024px) 100vw, 1280px"
-                        className="object-cover object-center"
+                        className="object-cover object-center scale-105"
                     />
-                </figure>
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/70 to-white dark:from-black/10 dark:via-[hsl(var(--background))]/75 dark:to-[hsl(var(--background))]" />
+                </div>
+            </div>
+            <div className="hero-grid-overlay" />
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32 grid gap-8 sm:gap-10 lg:gap-12 items-center lg:grid-cols-[2fr_1fr]">
                 <div>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                         <span className="block">{t('hero.greeting')}</span>
