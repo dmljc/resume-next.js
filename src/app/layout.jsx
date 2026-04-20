@@ -145,7 +145,6 @@ export default function RootLayout({ children }) {
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
-                <link rel="apple-touch-icon" href="/baidu-cover.jpg" />
                 <meta property="og:updated_time" content={today} />
                 <script
                     type="application/ld+json"

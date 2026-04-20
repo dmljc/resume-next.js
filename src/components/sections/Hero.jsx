@@ -12,8 +12,13 @@ export default function Hero() {
     const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     return (
         <section id="home" className="relative overflow-hidden">
+            {/*
+             * 顶部封面 Banner：用于百度 / Google SERP 出图候选。
+             * 要求：真实渲染尺寸 ≥ 200px 高、opacity 足够、无元素遮盖，
+             * 否则搜索引擎渲染器会把图当作装饰剔除。
+             */}
             <figure className="pointer-events-none absolute inset-x-0 top-0 flex justify-center select-none">
-                <div className="relative h-40 sm:h-48 md:h-56 w-full max-w-6xl overflow-hidden rounded-b-[2.5rem] opacity-[0.08]">
+                <div className="relative h-56 sm:h-72 md:h-80 lg:h-96 w-full max-w-6xl overflow-hidden rounded-b-[2.5rem] opacity-60 dark:opacity-30">
                     <Image
                         src="/baidu-cover.jpg"
                         alt={coverAlt}
@@ -23,7 +28,7 @@ export default function Hero() {
                         sizes="(max-width: 1024px) 100vw, 1280px"
                         className="object-cover object-center scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/70 to-white dark:from-black/10 dark:via-[hsl(var(--background))]/75 dark:to-[hsl(var(--background))]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/70 to-white dark:from-black/10 dark:via-[hsl(var(--background))]/80 dark:to-[hsl(var(--background))]" />
                 </div>
             </figure>
             <div className="hero-grid-overlay" />
