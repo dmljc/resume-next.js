@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
     };
     const profileImage = {
         '@type': 'ImageObject',
-        url: 'https://zhangfc.cn/resume.webp',
+        url: 'https://zhangfc.cn/resume.jpg',
         width: 400,
         height: 400,
         caption: '张芳朝个人头像',
@@ -108,6 +108,7 @@ export default function RootLayout({ children }) {
             name: '张芳朝 | 全栈开发工程师 | 专注三维可视化与性能优化',
             url: 'https://zhangfc.cn',
             primaryImageOfPage: coverImage,
+            thumbnailUrl: 'https://zhangfc.cn/baidu-cover.jpg',
             image: [coverImage, profileImage],
             about: {
                 '@type': 'Person',
@@ -145,6 +146,7 @@ export default function RootLayout({ children }) {
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta itemProp="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta property="og:updated_time" content={today} />
                 <script
                     type="application/ld+json"

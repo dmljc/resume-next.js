@@ -8,24 +8,9 @@ import { useI18n } from '../../lib/i18n-core.js';
 export default function Hero() {
     const { t, lang } = useI18n();
     const desc = t('hero.desc');
-    const coverAlt = '张芳朝 - 全栈开发工程师 | 专注三维可视化与性能优化';
     const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     return (
         <section id="home" className="relative overflow-hidden">
-            <figure className="pointer-events-none absolute inset-x-0 top-0 flex justify-center select-none">
-                <div className="relative h-40 sm:h-48 md:h-56 w-full max-w-6xl overflow-hidden rounded-b-[2.5rem] opacity-[0.08]">
-                    <Image
-                        src="/baidu-cover.jpg"
-                        alt={coverAlt}
-                        fill
-                        priority
-                        unoptimized
-                        sizes="(max-width: 1024px) 100vw, 1280px"
-                        className="object-cover object-center scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/70 to-white dark:from-black/10 dark:via-[hsl(var(--background))]/75 dark:to-[hsl(var(--background))]" />
-                </div>
-            </figure>
             <div className="hero-grid-overlay" />
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32 grid gap-8 sm:gap-10 lg:gap-12 items-center lg:grid-cols-[2fr_1fr]">
                 <div>
@@ -97,7 +82,7 @@ export default function Hero() {
                         className="relative z-10 rounded-full overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 h-40 w-40 sm:h-48 sm:w-48 md:h-60 md:w-60 lg:h-72 lg:w-72 xl:h-80 xl:w-80 3xl:h-96 3xl:w-96"
                     >
                         <Image
-                            src="/resume.webp"
+                            src="/resume.jpg"
                             alt="张芳朝 - 前端开发工程师头像"
                             fill
                             sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 240px, (max-width: 1280px) 288px, 320px"
