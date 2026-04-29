@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/card.jsx';
 
 import { Button } from '../ui/button.jsx';
@@ -7,6 +8,8 @@ import { Mail, Phone, QrCode } from 'lucide-react';
 import { showMessage } from '../../lib/message.js';
 import { useI18n } from '../../lib/i18n-core.js';
 import { contactInfo } from './contact.data.js';
+
+const WECHAT_QR_CODE_URL = 'https://zhangfc-resume.oss-cn-hangzhou.aliyuncs.com/WeChatQrCode.jpg';
 
 const contacts = [
     {
@@ -50,8 +53,20 @@ export default function ContactGrid() {
                         >
                             <CardHeader className="pb-4 text-center">
                                 <div className="flex justify-center">
-                                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full border border-gray-100 dark:border-gray-700 flex items-center justify-center transition-all duration-200 hover:scale-110 hover:border-primary/50">
+                                    <div className="group relative h-10 w-10 sm:h-12 sm:w-12 rounded-full border border-gray-100 dark:border-gray-700 flex items-center justify-center transition-all duration-200 hover:scale-110 hover:border-primary/50">
                                         <c.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary transition-transform duration-200" />
+                                        {c.actionKey === 'wechat' && (
+                                            <div className="pointer-events-none absolute left-1/2 bottom-full z-20 mb-4 hidden w-56 -translate-x-1/2 rounded-2xl border border-gray-100 bg-white p-3 opacity-0 shadow-2xl transition-opacity duration-200 group-hover:opacity-100 dark:border-gray-700 dark:bg-gray-900 lg:block">
+                                                <Image
+                                                    src={WECHAT_QR_CODE_URL}
+                                                    alt="张芳朝微信二维码"
+                                                    width={448}
+                                                    height={572}
+                                                    className="h-auto w-full rounded-xl"
+                                                    unoptimized
+                                                />
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                                 <CardTitle className="mt-3 text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">

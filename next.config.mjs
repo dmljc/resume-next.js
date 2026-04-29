@@ -7,6 +7,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
     reactStrictMode: true,
     compress: true,
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'zhangfc-resume.oss-cn-hangzhou.aliyuncs.com',
+            },
+        ],
+    },
     // 避免 Turbopack 将仓库根误判为上一级目录（会导致 @import 'tailwindcss' 在错误上下文中解析失败）
     turbopack: {
         root: __dirname,
