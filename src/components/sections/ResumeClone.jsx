@@ -71,11 +71,11 @@ export default function ResumeClone() {
                         <div className="relative w-40 h-40 rounded-full bg-gray-100 dark:bg-gray-800 overflow-hidden ring-4 ring-white dark:ring-gray-700 shadow-md">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/resume.webp"
-                                alt={t('brand.name')}
+                                src="/baidu-cover.jpg"
+                                alt="张芳朝 - 全栈开发工程师 | 专注 three.js 三维可视化与性能优化"
                                 width="160"
                                 height="160"
-                                className="w-full h-full object-cover avatar-image"
+                                className="w-full h-full object-cover object-[center_30%] avatar-image"
                             />
                         </div>
                     </div>

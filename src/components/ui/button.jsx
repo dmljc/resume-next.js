@@ -23,7 +23,6 @@ export const Button = React.forwardRef(
         );
 
         if (asChild && React.isValidElement(children)) {
-            // eslint-disable-next-line react-hooks/refs
             return React.cloneElement(children, {
                 ref,
                 className: cn(children.props?.className, classes),

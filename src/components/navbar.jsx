@@ -34,6 +34,8 @@ export default function Navbar() {
         const prefersDark =
             window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (saved === 'dark' || (!saved && prefersDark)) {
+            // 必须在客户端挂载后从浏览器读取偏好；初始化时 SSR 不可访问 localStorage/matchMedia。
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsDark(true);
         }
     }, []);

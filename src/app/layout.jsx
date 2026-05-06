@@ -142,11 +142,19 @@ export default function RootLayout({ children }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="baidu-site-verification" content="codeva-fHq7JvMXY2" />
                 <meta name="mobile-agent" content="format=html5;url=https://zhangfc.cn/" />
-                {/* 辅助百度出图 */}
+                {/* 辅助百度等搜索引擎出图：图片同时已在 body 中真实渲染（见 SeoCover） */}
                 <meta name="image" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <link rel="image_src" href="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta name="thumbnail" content="https://zhangfc.cn/baidu-cover.jpg" />
                 <meta itemProp="image" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta property="og:image:secure_url" content="https://zhangfc.cn/baidu-cover.jpg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="744" />
+                <meta property="og:image:type" content="image/jpeg" />
+                <meta
+                    property="og:image:alt"
+                    content="张芳朝 - 全栈开发工程师 | 专注 three.js 三维可视化与性能优化"
+                />
                 <meta property="og:updated_time" content={today} />
                 <script
                     type="application/ld+json"

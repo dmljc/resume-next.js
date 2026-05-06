@@ -8,11 +8,14 @@ export function I18nProvider({ children }) {
     const [mounted, setMounted] = React.useState(false);
 
     React.useEffect(() => {
+        // 必须在客户端挂载后再读取本地语言偏好；SSR 阶段不可访问 localStorage。
+        /* eslint-disable react-hooks/set-state-in-effect */
         setMounted(true);
         const saved = localStorage.getItem('lang');
         if (saved) {
             setLang(saved);
         }
+        /* eslint-enable react-hooks/set-state-in-effect */
     }, []);
 
     React.useEffect(() => {
