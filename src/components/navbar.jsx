@@ -12,7 +12,6 @@ import { useI18n } from '../lib/i18n-core.js';
 const navItems = [
     { id: 'home', path: '/' },
     { id: 'resume', path: '/resume' },
-    { id: 'aboutSite', path: '/about' },
 ];
 
 export default function Navbar() {

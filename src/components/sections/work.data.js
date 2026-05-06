@@ -29,7 +29,7 @@ export const jobs = [
         },
         company: { zh: '图维科技', en: 'TuWei Technology' },
         role: { zh: '三维项目技术负责人', en: '3D Project Technical Lead' },
-        time: { zh: '2023.04 至今', en: 'Apr 2023 — Present' },
+        time: { zh: '2023.04 至 2026.04', en: 'Apr 2023 — Oct 2025' },
         points: {
             zh: [
                 '主导工井标注与智慧大楼三维可视化项目落地，Cursor AI 辅助完成架构设计与需求分析；',
