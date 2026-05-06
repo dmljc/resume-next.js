@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Sparkles, Briefcase, GraduationCap, Mail } from 'lucide-react';
 
 export default function SectionNav() {
-    const [activeSection, setActiveSection] = React.useState(null);
+    const [activeSection, setActiveSection] = React.useState('skills');
 
     React.useEffect(() => {
         const sections = ['skills', 'experience', 'education', 'contact'];
@@ -44,8 +44,7 @@ export default function SectionNav() {
             if (el) observer.observe(el);
         }
 
-        // 初始兜底：如果 observer 尚未触发，默认选中第一个
-        setActiveSection(prev => prev ?? sections[0]);
+        // 初始默认选中第一个 section，已在 useState 初始值中给出，避免在 effect 中调用 setState
 
         return () => observer.disconnect();
     }, []);
