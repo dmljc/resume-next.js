@@ -7,14 +7,14 @@ export const jobs = [
         time: { zh: '2025.11 至今', en: 'Nov 2025 — Present' },
         points: {
             zh: [
-                '独立完成个人品牌官网从 0 到 1 的设计、开发、部署全流程；',
+                'SEO 效果优秀，支持通过百度/Google 搜索“张芳朝”直达官网；',
                 '基于 Next.js 16 + React 19 + Tailwind CSS 4 构建 SSR 服务端渲染应用，首屏加载 < 1s；',
                 '配置阿里云 ECS + OSS + CDN + Nginx 反向代理，结合 SSL 证书实现全站 HTTPS 安全访问与高可用；',
                 '完成 SEO 全链路优化：sitemap.xml、robots.txt、JSON-LD 结构化数据、百度/Google 站长验证；',
                 '实现中英文国际化（i18n）、响应式多端适配、PM2 进程守护，保障服务 7×24 稳定运行；',
             ],
             en: [
-                'Independently completed full lifecycle of personal brand website: design, development, and deployment;',
+                'Achieved strong SEO visibility, enabling users to find the site by searching “Zhang Fangchao” on Google/Baidu;',
                 'Built SSR application using Next.js 16 + React 19 + Tailwind CSS 4, achieving < 1s first-screen load;',
                 'Configured Alibaba Cloud ECS, OSS, CDN, and Nginx reverse proxy with SSL certificates to enable full‑site HTTPS and high availability;',
                 'Implemented full SEO optimization: sitemap.xml, robots.txt, JSON-LD structured data, Baidu/Google webmaster verification;',
