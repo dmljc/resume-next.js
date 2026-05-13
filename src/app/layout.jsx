@@ -5,19 +5,20 @@ import '../index.css';
 
 const SITE_URL = 'https://zhangfc.cn';
 const COVER_IMAGE_URL = `${SITE_URL}/baidu-cover.jpg`;
-const COVER_IMAGE_ALT = '张芳朝 - 全栈开发工程师 | 专注 three.js 三维可视化与性能优化';
+const COVER_IMAGE_ALT = '张芳朝 - 全栈开发工程师 | 三维可视化与工程化实践';
 
 export const metadata = {
     metadataBase: new URL(SITE_URL),
     // title: 25-60 字符，核心关键词前置
     title: {
-        default: '张芳朝 | 全栈开发工程师 | 专注three.js 三维可视化与性能优化',
+        default: '张芳朝 | 全栈开发工程师 | 三维可视化与工程化实践',
         template: '%s | 张芳朝',
     },
     // description: 80-160 字符，包含关键词 + 差异化优势 + 行动号召
     description:
-        '张芳朝，9年资深全栈开发工程师。专注 three.js 三维可视化、性能优化、系统重构、SSR服务端渲染。主导多个核心项目从0到1落地。',
-    keywords: '张芳朝,张芳朝简历,全栈开发工程师,前端专家,三维可视化,性能优化,React,Next.js',
+        '张芳朝，10年软件开发（全栈）经验，包含4年团队管理。专注 Three.js 三维可视化、性能优化、系统重构、SSR 服务端渲染与工程化建设。',
+    keywords:
+        '张芳朝,张芳朝简历,全栈开发工程师,技术负责人,三维可视化,性能优化,工程化,React,Next.js',
     authors: [{ name: '张芳朝', url: SITE_URL }],
     creator: '张芳朝',
     robots: {
@@ -38,8 +39,8 @@ export const metadata = {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: '张芳朝 | 9年资深全栈开发工程师',
-        description: '专注三维可视化、性能优化、系统重构，提供高质量的 web 技术解决方案。',
+        title: '张芳朝 | 10年全栈开发工程师',
+        description: '专注三维可视化、性能优化、系统重构与工程化建设，具备团队管理和项目交付经验。',
         url: SITE_URL,
         siteName: '张芳朝个人官网',
         locale: 'zh_CN',
@@ -56,8 +57,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '张芳朝 | 9年资深全栈开发工程师',
-        description: '专注三维可视化、性能优化、系统重构，提供高质量的 web 技术解决方案。',
+        title: '张芳朝 | 10年全栈开发工程师',
+        description: '专注三维可视化、性能优化、系统重构与工程化建设，具备团队管理和项目交付经验。',
         images: [
             {
                 url: COVER_IMAGE_URL,
@@ -141,7 +142,8 @@ export default function RootLayout({ children }) {
             url: SITE_URL,
             image: profileImage,
             sameAs: ['https://github.com/zhangfc', SITE_URL],
-            description: '9年前端开发经验，专注三维可视化、性能优化、系统重构。',
+            description:
+                '10年软件开发（全栈）经验，包含4年团队管理，专注三维可视化、性能优化、系统重构与工程化建设。',
         },
         {
             '@context': 'https://schema.org',
@@ -152,7 +154,7 @@ export default function RootLayout({ children }) {
         {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: '张芳朝 | 全栈开发工程师 | 专注三维可视化与性能优化',
+            name: '张芳朝 | 全栈开发工程师 | 三维可视化与工程化实践',
             url: SITE_URL,
             primaryImageOfPage: coverImage,
             thumbnailUrl: COVER_IMAGE_URL,

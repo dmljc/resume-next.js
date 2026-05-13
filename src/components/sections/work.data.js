@@ -29,20 +29,20 @@ export const jobs = [
         },
         company: { zh: '图维科技', en: 'TuWei Technology' },
         role: { zh: '三维项目技术负责人', en: '3D Project Technical Lead' },
-        time: { zh: '2023.04 至 2026.04', en: 'Apr 2023 — Oct 2025' },
+        time: { zh: '2023.04 至 2026.04', en: 'Apr 2023 — Apr 2026' },
         points: {
             zh: [
-                '主导工井标注与智慧大楼三维可视化项目落地，Cursor AI 辅助完成架构设计与需求分析；',
-                '基于 Monorepo 架构和 Three.js、Vue3、TypeScript、Vite、Rollup 构建三维可视化应用；',
+                '主导工井标注与智慧大楼三维可视化项目从架构设计、需求拆解到交付落地，结合 Cursor 提升方案设计效率；',
+                '基于 Monorepo 架构和 Three.js、Vue3、TypeScript、Vite、Rollup 构建三维可视化应用，统一多项目研发范式；',
                 '优化三维模型渲染性能，模型加载速度提升 40%，复杂场景下交互更流畅；',
-                '沉淀 Tthree 三维基座，统一 TypeDoc 注释规范，并通过 VitePress 自动生成技术文档；',
+                '沉淀 Tthree 三维基座，统一 TypeDoc 注释规范，并通过 VitePress 自动生成技术文档，降低后续项目接入成本；',
                 '牵头三维技术方向能力建设，组织 6 场内部技术分享，培养 2 名核心开发人员；',
             ],
             en: [
-                'Led well‑annotation and Smart Building 3D visualization projects to delivery; used Cursor AI to assist with architecture design and requirements analysis;',
-                'Built 3D visualization applications on a monorepo architecture using Three.js, Vue 3, TypeScript, Vite, and Rollup;',
+                'Led well-annotation and Smart Building 3D visualization projects from architecture design and requirement breakdown to delivery, using Cursor to improve solution-design efficiency;',
+                'Built 3D visualization applications on a monorepo architecture using Three.js, Vue 3, TypeScript, Vite, and Rollup, standardizing development patterns across projects;',
                 'Optimized 3D model rendering; improved loading speed by 40% and enabled smooth interaction in complex scenes;',
-                'Built the Tthree 3D foundation library, standardized TypeDoc comments, and auto‑generated technical documentation with VitePress;',
+                'Built the Tthree 3D foundation library, standardized TypeDoc comments, and auto-generated technical documentation with VitePress, reducing onboarding cost for follow-up projects;',
                 'Drove team capability building for 3D tech; organized 6 internal tech talks and mentored 2 core developers;',
             ],
         },
@@ -57,12 +57,12 @@ export const jobs = [
         time: { zh: '2021.07 至 2022.12', en: 'Jul 2021 — Dec 2022' },
         points: {
             zh: [
-                '主导 4 人前端小组常态研发与协作管理，制定统一技术规范，协作效率提升 30%；',
-                '基于 React、React Hooks、TypeScript、Echarts、Webpack 等，把首屏加载时间从 10s 压缩至 2.5s；',
+                '主导 4 人前端小组常态研发与协作管理，建立代码评审、排期拆解与统一技术规范，协作效率提升 30%；',
+                '基于 React、React Hooks、TypeScript、ECharts、Webpack 等完成性能治理，把首屏加载时间从 10s 压缩至 2.5s；',
                 '优化后用户留存率提升 25%，支撑展会期间日均 10 万+ 访问量稳定运行；',
             ],
             en: [
-                'Led a 4‑person frontend team’s daily development and collaboration; established unified technical standards, improving collaboration efficiency by 30%;',
+                'Led a 4-person frontend team’s daily development and collaboration, establishing code review, task breakdown, and unified technical standards, improving collaboration efficiency by 30%;',
                 'Using React, React Hooks, TypeScript, ECharts, and Webpack, reduced the first‑screen loading time from 10s to 2.5s;',
                 'Post‑optimization, increased user retention by 25% and supported 100k+ daily visits during events with stable performance;',
             ],

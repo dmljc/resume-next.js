@@ -7,10 +7,10 @@ import ScrollTopButton from '../components/ScrollTopButton';
 import SectionNav from '../components/SectionNav';
 
 export const metadata = {
-    title: '张芳朝 | 全栈开发工程师 | 专注三维可视化与性能优化',
+    title: '张芳朝 | 全栈开发工程师 | 三维可视化与工程化实践',
     description:
-        '张芳朝，9年资深前端/全栈开发经验。专注三维可视化、性能优化、系统重构。主导多个核心项目从0到1落地。',
-    keywords: '张芳朝,张芳朝简历,全栈开发工程师,前端专家,三维可视化,性能优化',
+        '张芳朝，10年软件开发（全栈）经验，包含4年团队管理。专注三维可视化、性能优化、系统重构与工程化建设。',
+    keywords: '张芳朝,张芳朝简历,全栈开发工程师,技术负责人,三维可视化,性能优化,工程化',
     alternates: {
         canonical: 'https://zhangfc.cn',
     },
@@ -20,7 +20,7 @@ export const metadata = {
                 url: 'https://zhangfc.cn/baidu-cover.jpg',
                 width: 1200,
                 height: 744,
-                alt: '张芳朝 - 全栈开发工程师 | 专注三维可视化与性能优化',
+                alt: '张芳朝 - 全栈开发工程师 | 三维可视化与工程化实践',
                 type: 'image/jpeg',
             },
         ],

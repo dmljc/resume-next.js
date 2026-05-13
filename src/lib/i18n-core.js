@@ -5,8 +5,8 @@ import * as React from 'react';
 export const dict = {
     'brand.name': { zh: '张芳朝', en: 'Zhang Fangchao' },
     'site.title': {
-        zh: '张芳朝 — 前端开发',
-        en: 'ZhangFangChao — Frontend Developer',
+        zh: '张芳朝 — 全栈开发工程师',
+        en: 'Zhang Fangchao — Full-Stack Software Engineer',
     },
     'nav.home': { zh: '主页', en: 'Home' },
     'nav.skills': { zh: '核心技能', en: 'Core Skills' },
@@ -18,8 +18,8 @@ export const dict = {
     'nav.toggleLang': { zh: '切换语言', en: 'Toggle Language' },
     // Resume filename for PDF export
     'resume.filename': {
-        zh: '张芳朝-全栈偏前端-9年工作经验.pdf',
-        en: 'Zhang-Fangchao-Full-Stack-Frontend-leaning-9-Years-Experience.pdf',
+        zh: '张芳朝-全栈开发工程师-10年软件开发经验.pdf',
+        en: 'Zhang-Fangchao-Full-Stack-Software-Engineer-10-Years-Experience.pdf',
     },
 
     // Resume page common actions
@@ -31,8 +31,8 @@ export const dict = {
     },
     // Common profile subtitle shown on both pages
     'profile.subtitle': {
-        zh: '前端开发 | 9年经验',
-        en: 'Frontend Developer | 9 Years Experience',
+        zh: '全栈开发工程师 | 10年软件开发经验',
+        en: 'Full-Stack Software Engineer | 10 Years Experience',
     },
 
     // Experience section
@@ -50,28 +50,28 @@ export const dict = {
         en: '[AI Capabilities]',
     },
     'advantages.value.experience': {
-        zh: '9 年前端开发，包含 4 年团队管理',
-        en: '9 years in frontend development, including 4 years in team leadership',
+        zh: '10 年软件开发（全栈），包含 4 年团队管理',
+        en: '10 years in full-stack software development, including 4 years in team leadership',
     },
     'advantages.value.stack': {
-        zh: 'React、React Hooks、Vue、TypeScript、Three.js、Next.js (SSR)、Nest.js、Monorepo ...',
-        en: 'React, React Hooks, Vue, TypeScript, Three.js, Next.js (SSR), Nest.js, monorepo architecture, etc.',
+        zh: 'React、React Hooks、Vue、TypeScript、Three.js、Next.js (SSR)、Nest.js、uni-app 和 Taro 跨端、Monorepo ...',
+        en: 'React, React Hooks, Vue, TypeScript, Three.js, Next.js (SSR), Nest.js, uni-app, Taro (cross-platform), monorepo architecture, etc.',
     },
     'advantages.value.focus': {
         zh: '三维可视化、中后台重构、性能优化',
         en: '3D visualization, admin‑system refactoring, performance optimization',
     },
     'advantages.value.highlights': {
-        zh: 'AI 辅助编程、AI Agent 自动化集成',
-        en: 'AI‑assisted development, AI agent automation integration',
+        zh: 'Cursor、Claude Code、Codex、LangChain / AI Agent 工程实践',
+        en: 'Cursor, Claude Code, Codex, LangChain / AI Agent engineering practice',
     },
 
     'hero.greeting': { zh: '你好，我是', en: "Hi, I'm" },
     'hero.learn': { zh: '了解更多', en: 'Learn More' },
     'hero.contact': { zh: '联系我', en: 'Contact Me' },
     'hero.desc': {
-        zh: '【专业经验】：9 年前端开发，包含 4 年团队管理\n【技术体系】：React、React Hooks、Vue、TypeScript、Three.js、Next.js (SSR)、Nest.js、Monorepo ...\n【特色领域】：三维可视化、中后台重构、性能优化\n【AI 能力】：AI 辅助编程、AI Agent 自动化集成',
-        en: 'Professional Experience: 9 years in frontend, including 4 years in team leadership\nTech Stack: React, React Hooks, Vue, TypeScript, Three.js, Next.js (SSR), Nest.js, monorepo architecture, etc.\nFocus Areas: 3D visualization, admin‑system refactoring, performance optimization\nAI Capabilities: AI‑assisted development, AI agent automation integration',
+        zh: '【专业经验】：10 年软件开发（全栈），包含 4 年团队管理\n【技术体系】：React、React Hooks、Vue、TypeScript、Three.js、Next.js (SSR)、Nest.js、uni-app 和 Taro 跨端、Monorepo ...\n【特色领域】：三维可视化、中后台重构、性能优化\n【AI 能力】：Cursor、Claude Code、Codex、LangChain / AI Agent 工程实践',
+        en: 'Professional Experience: 10 years in full-stack software development, including 4 years in team leadership\nTech Stack: React, React Hooks, Vue, TypeScript, Three.js, Next.js (SSR), Nest.js, uni-app, Taro (cross-platform), monorepo architecture, etc.\nFocus Areas: 3D visualization, admin‑system refactoring, performance optimization\nAI Capabilities: Cursor, Claude Code, Codex, LangChain / AI Agent engineering practice',
     },
 
     'skills.title': { zh: '核心技能', en: 'Core Skills' },
@@ -85,16 +85,16 @@ export const dict = {
     'skills.backend': { zh: '后端技术', en: 'Backend' },
     'skills.management': { zh: '团队管理', en: 'Team Leadership' },
     'skills.frontend.desc': {
-        zh: '熟悉现代前端框架与工程化，涵盖三维、数据可视化、小程序与微前端，善用 AI 工具提效。',
-        en: 'Modern frontend and tooling, covering 3D & data visualization, mini‑programs and micro‑frontends, leveraging AI tools for efficient delivery.',
+        zh: '具备前端架构、工程化体系、性能治理与组件化建设经验，覆盖三维可视化、小程序、微前端与跨端开发。',
+        en: 'Frontend architecture, engineering systems, performance governance, and componentization, covering 3D visualization, mini-programs, micro-frontends, and cross-platform development.',
     },
     'skills.backend.desc': {
-        zh: '掌握 Nest.js、Node.js、Nginx、MySQL；具备服务端开发、数据存储设计、接口设计能力。',
-        en: 'Proficient: Nest.js, Node.js, Nginx, MySQL; Familiar: server‑side development, data storage design, API design.',
+        zh: '掌握 Nest.js、Node.js、Nginx、MySQL；具备接口设计、数据库设计、权限体系、服务部署与性能优化经验。',
+        en: 'Proficient with Nest.js, Node.js, Nginx, and MySQL, with experience in API design, database design, permission systems, service deployment, and performance optimization.',
     },
     'skills.management.desc': {
-        zh: '技术规划、团队建设、项目管理、技术规范制定、内部培训赋能。',
-        en: 'Tech strategy, team building, project management, technical standards, internal training & enablement.',
+        zh: '技术规划、团队协作、项目推进、技术规范制定、代码评审、人才培养与内部培训赋能。',
+        en: 'Tech strategy, team collaboration, project delivery, technical standards, code review, talent development, and internal training enablement.',
     },
 
     'education.title': { zh: '教育背景', en: 'Education' },

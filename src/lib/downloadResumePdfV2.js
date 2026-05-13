@@ -14,8 +14,8 @@ export async function downloadResumePdfViaPrint(lang = 'zh') {
             dict['resume.filename'] && dict['resume.filename'][lang]
                 ? dict['resume.filename'][lang].replace(/\.pdf$/i, '')
                 : lang === 'zh'
-                  ? '张芳朝-全栈偏前端-9年工作经验'
-                  : 'Zhang-Fangchao-Full-Stack-Frontend-leaning-9-Years-Experience';
+                  ? '张芳朝-全栈开发工程师-10年软件开发经验'
+                  : 'Zhang-Fangchao-Full-Stack-Software-Engineer-10-Years-Experience';
 
         // 保存原始标题
         const originalTitle = document.title;
